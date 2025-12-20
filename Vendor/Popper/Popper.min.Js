@@ -3112,3 +3112,4 @@ function getPopperOffsets(popper, referenceOffsets, position) {
       popperOffsets.left = referenceOffsets.right;
       break;
     case 'left':
+      
