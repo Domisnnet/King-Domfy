@@ -62,7 +62,7 @@ Clique no botão abaixo para acessar:
 
 Para explorar o código-fonte e contribuir com o projeto, acesse:
 
-[Repositório do King-Domfy](https://github.com/Domisnnet/King-Domfy)
+![Repositório do King-Domfy](https://github.com/Domisnnet/King-Domfy)
 
 ## Créditos 📝
 
