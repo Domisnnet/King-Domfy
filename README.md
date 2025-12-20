@@ -1,7 +1,7 @@
 
  # King-Domfy - Música para Todos 🎵 🎵
 
-![King-Domfy](Src/Images/iMac-24-1120x630.png)
+![King-Domfy](src/imagens/iMac-24-1120x630.png)
 
 Bem-vindo ao nosso projeto King-Domfy! Este projeto é uma recriação da interface do Spotify, focada em apresentar uma experiência de usuário similar, com layout responsivo e funcionalidades básicas.
 
@@ -55,7 +55,7 @@ Este projeto foi desenvolvido usando:
 Clique no botão abaixo para acessar:
 
 <a href="https://domisnnet.github.io/King-Domfy/" target="_blank" rel="noopener noreferrer">
-   <img src="Src/Images/botão.webp" width="35px" height="35px" alt="Acessar">
+   <img src="src/imagens/botão.webp" width="35px" height="35px" alt="Acessar">
 </a>   
 
 ## Código Fonte 💻
@@ -116,7 +116,7 @@ Contribuições são sempre bem-vindas! Se você deseja contribuir com este proj
    **Resposta:** Você pode entrar em contato através do perfil do GitHub: 
 
 <a href="https://github.com/Domisnnet">
-    <img src="Src/Images/DomisDev.png" width="60px" height="60px" alt="Acessar perfil GitHub">
+    <img src="src/imagens/DomisDev.png" width="60px" height="60px" alt="Acessar perfil GitHub">
     DomisDev
 </a> 
 
