@@ -1,4 +1,3 @@
-
 html, body, #home {
 	height: 100%;
 	overflow-x: hidden;
@@ -123,28 +122,44 @@ footer .navbar-nav a {
 	font-size: 1em;
 }
 
-footer .navbar-nav a:hover {
+#dev {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 23px;
+	color: white;
+}
+
+footer #dev:hover {
 	color: #9bf0e1;
 	text-decoration: none;
 }
 
+.externo::after {
+    content:'\1F517';
+}
+
 footer ul {
 	list-style: none;
-  padding-left: 0;
+  	padding-left: 0;
 }
 
-footer #media {
+footer #media, footer .social-media-icons {
 	display: flex;
-	margin-left: -15px;
 }
 
-footer .col-md-6 ul {
-  display: flex;
-  justify-content: flex-end;
+footer #media li, footer .social-media-icons li {
+  margin: 0 10px;
 }
 
-footer .col-md-6 li {
-	margin: 0px 5px;
+.devicon-img {
+  width: 60px;
+  height: 55px;
+  padding-top: 10px 0px 10px 0px;
+}
+
+.social-icon {
+  width: 45px;
 }
 
 h1 {
