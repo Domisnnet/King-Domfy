@@ -194,9 +194,6 @@ footer .social-media-icons li {
 }
 
 #dev {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 23px;
     color: white;
 }
