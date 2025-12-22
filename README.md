@@ -1,4 +1,4 @@
-<h2 id="sobre-o-projeto">1. 🎵 King-Domfy - Música para Todos</h2>
+<h2 id="sobre-o-projeto">1. 🎵 King-Domfy - Música para Todos 🎵🎵</h2>
 
 ![Status do Deploy](https://img.shields.io/badge/Status-Online-brightgreen)
 ![Tecnologias](https://img.shields.io/badge/Tecnologias-HTML%20%7C%20CSS%20%7C%20JS%20%7C%20Bootstrap-blueviolet)
