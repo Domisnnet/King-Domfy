@@ -7,9 +7,8 @@
     box-sizing: border-box;
 }
 
-html, body, #home {
+html {
     height: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -19,6 +18,19 @@ body {
         linear-gradient(50deg, #ff4169, #7c26f8);
     background-attachment: fixed;
     font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Layout padrão para a página inicial */
+body#home {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Layout de rodapé fixo para outras páginas */
+body:not(#home) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 
@@ -87,6 +99,11 @@ nav.navbar-transparente {
     padding-bottom: 20px;
 }
 
+/* Faz o conteúdo principal crescer e empurrar o rodapé para baixo em páginas de subnível */
+body:not(#home) .caixa {
+    flex-grow: 1;
+}
+
 
 /* =========================
    Botões
@@ -131,6 +148,10 @@ nav.navbar-transparente {
 /* =========================
    Seções específicas
 ========================= */
+#home {
+    height: 100%;
+}
+
 #servicos {
     background: white;
 }
