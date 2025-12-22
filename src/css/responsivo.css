@@ -55,12 +55,15 @@
   }
 
   /* Centraliza o conteúdo do rodapé */
-  footer .col-md-2,
-  footer .col-md-6 {
+  footer .col-lg-3 {
     text-align: center;
   }
 
-  footer .col-md-6 ul {
+  footer .col-lg-3 ul {
+    justify-content: center;
+  }
+
+  footer #media {
     justify-content: center;
   }
 
@@ -109,6 +112,26 @@
   h2 {
     font-size: 2.8em;
   }
+
+  /* Alinha o conteúdo do rodapé no centro em tablets */
+  footer .col-md-6 {
+    text-align: center;
+    margin-bottom: 30px; 
+  }
+
+  footer .col-md-6 ul {
+    justify-content: center;
+  }
+
+  footer .col-md-6:last-child,
+  footer .col-md-6:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  footer #media {
+    justify-content: center;
+  }
+
 }
 
 /* 
