@@ -111,11 +111,20 @@ Deseja analisar a estrutura do projeto? Explore o repositório oficial:
 
 ---
 
-<h2 id="créditos">10. 📝 Créditos</h2>
+<h2 id="créditos">10. 📝 Créditos & Reconhecimentos</h2>
 
-* **Desenvolvedor: 👨‍💻 DomisDev.**
-* **Inspiração:** 🎧 Interface clássica do Spotify.
-* **Recursos:** Bibliotecas Bootstrap, DevIcons e Font Awesome.
+O **King-Domfy** é o resultado de esforço técnico e inspiração em grandes players do mercado. Abaixo, os pilares que tornaram este projeto possível:
+
+| Atribuição | Responsável / Recurso | Descrição |
+| :--- | :--- | :--- |
+| **Arquitetura & Dev** | [**DomisDev**](https://github.com/Domisnnet) | Idealização, estruturação do código e implementação da lógica responsiva. |
+| **Identidade Visual** | **Spotify Inc.** | Referência de Design System, paleta de cores e UX (User Experience). |
+| **Engine Gráfica** | **Bootstrap & CSS3** | Fornecimento dos componentes de layout e estilização moderna. |
+| **Assets Visuais** | **Font Awesome & Devicons** | Ícones de alta fidelidade que compõem a estética da interface. |
+| **Aprendizado** | **Comunidade Dev** | Baseado em princípios de Clean Code e boas práticas de Front-end. |
+
+### 🎯 Missão do Projeto
+> "Este projeto foi construído com o propósito de demonstrar que interfaces complexas podem ser recriadas com precisão utilizando tecnologias fundamentais da web, servindo de base para estudos de UI/UX e performance."
 
 ---
 
