@@ -1,228 +1,190 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="vendor/devicons/devicons.min.css">
 
-    <!-- HTML5Shiv -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="KingDomfy - O seu clone de player de música favorito. Descubra novas músicas, crie playlists e aproveite o melhor do streaming.">
 
-    <link rel="stylesheet" type="text/css" href="src/css/estilos-globais.css">
-    <title>KingDomfy - Música para todos</title>
-    <link rel="icon" href="src/imagens/favicon.png">
-  </head>
+  <title>KingDomfy - Música para Todos</title>
+  <link rel="icon" href="src/imagens/favicon.png">
 
-  <body id="home">
-    <header> 
-      <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
-        <div class="container">
-          <a href="index.html" class="navbar-brand">
-          <img src="src/imagens/KingDomfy.png" width="100">
-          </a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="vendor/devicons/devicons.min.css">
+  <link rel="stylesheet" type="text/css" href="src/css/estilos-globais.css">
+</head>
+
+<body id="home">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img src="src/imagens/KingDomfy.png" width="100" alt="Logo KingDomfy">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-principal" aria-controls="nav-principal" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars text-white"></i>
         </button>
         <div class="collapse navbar-collapse" id="nav-principal">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a href="pages/premium.html" class="nav-link">Premium</a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/ajuda.html" class="nav-link">Ajuda</a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/baixar.html" class="nav-link">Baixar</a>
-            </li>
+            <li class="nav-item"><a href="pages/premium.html" class="nav-link">Premium</a></li>
+            <li class="nav-item"><a href="pages/ajuda.html" class="nav-link">Ajuda</a></li>
+            <li class="nav-item"><a href="pages/baixar.html" class="nav-link">Baixar</a></li>
             <li class="nav-item divisor"></li>
-            <li class="nav-item">
-              <a href="pages/inscrever-se.html" class="nav-link">Inscrever-se</a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/entrar.html" class="nav-link">Entrar</a>
-            </li>
+            <li class="nav-item"><a href="pages/inscrever-se.html" class="nav-link">Inscrever-se</a></li>
+            <li class="nav-item"><a href="pages/entrar.html" class="nav-link">Entrar</a></li>
           </ul>
         </div>
-        </div>
-      </nav>
-    </header> 
+      </div>
+    </nav>
+  </header>
 
-    <section id="home" class="d-flex"> 
-      <div class="container align-self-center">
-        <div class="row">
-          <div class="col-md-12 capa">
-            <div id="carousel-kingdomfy" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <h1>Música para todos</h1>
-                    <a href="pages/inscrever-se.html" class="btn btn-lg btn-custom btn-roxo">
-                      KingDomfy Free
-                    </a>
-                    <a href="pages/premium.html" class="btn btn-lg btn-custom btn-branco">
-                      KingDomfy Premium
-                    </a>
-                </div>
-                <div class="carousel-item">
-                  <h1>As melhores rádios</h1>
-                    <a href="pages/player-da-web.html" class="btn btn-lg btn-custom btn-branco">
-                    <i class="fas fa-music"></i> Ouça agora
-                    </a>
-                </div>
-                <a href="#carousel-kingdomfy" class="carousel-control-prev" data-slide="prev">
-                  <i class="fas fa-angle-left fa-4x"></i>
-                </a>
-                <a href="#carousel-kingdomfy" class="carousel-control-next" data-slide="next">
-                  <i class="fas fa-angle-right fa-4x"></i>
-                </a>
-              </div>
+  <main>
+    <section id="capa" class="capa">
+      <div class="container">
+        <div id="carousel-spotify" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <h1>Música para todos</h1>
+              <a href="pages/inscrever-se.html" class="btn btn-lg btn-custom btn-roxo">Aproveite o KingDomfy Free</a>
+              <a href="pages/premium.html" class="btn btn-lg btn-custom btn-branco">Obter KingDomfy Premium</a>
+            </div>
+            <div class="carousel-item">
+              <h1>As melhores rádios</h1>
+              <a href="pages/premium.html" class="btn btn-lg btn-custom btn-branco"><i class="fas fa-play"></i> Ouça agora</a>
             </div>
           </div>
+          <a href="#carousel-spotify" class="carousel-control-prev" role="button" data-slide="prev">
+            <i class="fas fa-angle-left fa-3x"></i>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a href="#carousel-spotify" class="carousel-control-next" role="button" data-slide="next">
+            <i class="fas fa-angle-right fa-3x"></i>
+            <span class="sr-only">Próximo</span>
+          </a>
         </div>
       </div>
     </section>
-    <section id="servicos" class="caixa"> 
+
+    <section id="servicos" class="caixa">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
             <div class="row albuns">
               <div class="col-md-6">
-                <img src="src/imagens/img1.jpg" class="img-fluid">
+                <img src="src/imagens/img1.jpg" class="img-fluid" alt="Capa de álbum 1">
               </div>
               <div class="col-md-6">
-                <img src="src/imagens/img2.jpg" class="img-fluid">
+                <img src="src/imagens/img2.jpg" class="img-fluid" alt="Capa de álbum 2">
               </div>
             </div>
             <div class="row albuns">
               <div class="col-md-6">
-                <img src="src/imagens/img3.jpg" class="img-fluid">
+                <img src="src/imagens/img3.jpg" class="img-fluid" alt="Capa de álbum 3">
               </div>
               <div class="col-md-6">
-                <img src="src/imagens/img4.jpg" class_="img-fluid">
+                <img src="src/imagens/img4.jpg" class="img-fluid" alt="Capa de álbum 4">
               </div>
             </div>
           </div>
           <div class="col-md-6">
             <h2>O que o KingDomfy tem?</h2>
             <h3>Músicas</h3>
-            <p>
-              O KingDomfy tem milhões de músicas. Escute seus sons favoritos, descubra novas músicas e reúna seus favoritos em um só lugar.</p>
-
-            <h3>Playlistis</h3>
+            <p>O KingDomfy tem milhões de músicas. Escute seus sons favoritos, descubra novas músicas e reúna seus favoritos em um só lugar.</p>
+            <h3>Playlists</h3>
             <p>No KingDomfy você encontra uma playlist para cada momento. Todas feitas por fanáticos e especialistas da música.</p>
-            <h3>Novos Lançamentos</h3>
-            <p>Escute os novos lançamentos de singles e albuns da semana e vaja o que está bombando no Top 50.</p>
+            <h3>Novos lançamentos</h3>
+            <p>Escute os novos lançamentos de singles e álbuns da semana e veja o que está bombando no Top 50.</p>
           </div>
         </div>
       </div>
-    </section> 
+    </section>
+
     <section id="recursos" class="caixa">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <h2>Fácil</h2>
             <h3>Buscar</h3>
-            <p>Já sabe o que escutar? É só procurar e apertar o play.</p>
+            <p>Já sabe o que quer escutar? É só procurar e apertar o play.</p>
             <h3>Navegar</h3>
             <p>Veja os novos lançamentos, o que está bombando nas paradas e as melhores playlists para o seu momento.</p>
             <h3>Descobrir</h3>
-            <p>Curta músicas novas toda segunda-feira com uma playlist personalizada para você. Ou relaxe e curta uma das rádios.</p>
+            <p>Curta músicas novas toda segunda-feira com uma playlist personalizada para você. Ouça os últimos lançamentos de seus artistas favoritos.</p>
           </div>
           <div class="col-md-8">
             <div class="row rotacionar">
               <div class="col-md-6">
-                <img src="src/imagens/iphone1.png" class="img-fluid">
+                <img src="src/imagens/iphone1.png" class="img-fluid" alt="iPhone com KingDomfy App">
               </div>
               <div class="col-md-6">
-                <img src="src/imagens/iphone2.png" class="img-fluid">
+                <img src="src/imagens/iphone2.png" class="img-fluid" alt="iPhone com KingDomfy App em outra tela">
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+  </main>
 
-    <footer>
-      <div class="container">
+  <footer>
+    <div class="container">
         <div class="row">
-          <div class="col-lg-auto mb-4">
-            <h4>Company</h4>
-            <ul class="navbar-nav">
-              <li><a href="pages/sobre.html">Sobre</a></li>
-              <li><a href="pages/empregos.html">Empregos</a></li>
-              <li><a href="pages/imprensa.html">Imprensa</a></li>
-              <li><a href="pages/novidades.html">Novidades</a></li>
-            </ul>
+            <div class="col-lg-auto mb-4">
+                <h4>Company</h4>
+                <ul class="navbar-nav">
+                    <li><a href="pages/sobre.html">Sobre</a></li>
+                    <li><a href="pages/empregos.html">Empregos</a></li>
+                    <li><a href="pages/imprensa.html">Imprensa</a></li>
+                    <li><a href="pages/novidades.html">Novidades</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-auto mb-4">
+                <h4>Comunidades</h4>
+                <ul class="navbar-nav">
+                    <li><a href="pages/artistas.html">Para Artistas</a></li>
+                    <li><a href="pages/desenvolvedores.html">Desenvolvedores</a></li>
+                    <li><a href="pages/marcas.html">Marcas</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-auto mb-4">
+                <h4>Links Úteis</h4>
+                <ul class="navbar-nav">
+                    <li><a href="pages/ajuda.html">Ajuda</a></li>
+                    <li><a href="pages/player-da-web.html">Player da Web</a></li>
+                    <li><a href="pages/aplicativo-movel-gratis.html">Aplicativo móvel grátis</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-auto mb-4">
+              <h4>Site feito com:</h4>
+              <ul id="media">
+                  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" class="espaco devicon-img" alt="HTML5"></li>
+                  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" class="espaco devicon-img" alt="CSS3"></li>
+                  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" class="espaco devicon-img" alt="JavaScript"></li>
+              </ul>
           </div>
           <div class="col-lg-auto mb-4">
-            <h4>Comunidades</h4>
-            <ul class="navbar-nav">
-              <li><a href="pages/artistas.html">Artistas</a></li>
-              <li><a href="pages/desenvolvedores.html">Desenvolvedores</a></li>
-              <li><a href="pages/marcas.html">Marcas</a></li>
-            </ul>
+              <h4>Site feito por:</h4>
+              <ul class="navbar-nav">
+                  <li><a href="https://github.com/Domisnnet/" target="_blank" class="navbar-link externo" id="dev">DomisDev</a></li>
+              </ul>
           </div>
-          <div class="col-lg-auto mb-4">
-            <h4>Links Úteis</h4>
-            <ul class="navbar-nav">
-              <li><a href="pages/suporte.html">Suporte</a></li>
-              <li><a href="pages/player-da-web.html">Player da Web</a></li>
-              <li><a href="pages/aplicativo-movel-gratis.html">Aplicativo móvel grátis</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-auto mb-4">
-            <h4>Site feito com:</h4>
-            <ul id="media">
-              <li>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" class="espaco devicon-img" />
-              </li>
-              <li>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" class="espaco devicon-img" />
-              </li>
-               <li>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" class="espaco devicon-img" />
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-auto mb-4">
-            <h4>Site feito por:</h4>
-            <ul class="navbar-nav">
-              <li>
-                <a href="https://github.com/Domisnnet/" target="_blank" class="navbar-link externo" id="dev">
-                  DomisDev
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-auto mb-4 ml-lg-auto">
-            <h4>Redes Sociais:</h4>
-            <ul class="social-media-icons">
-              <li>
-                <a href="#">
-                  <img src="src/imagens/facebook.png" class="social-icon">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="src/imagens/twitter.png" class="social-icon">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="src/imagens/instagram.png" class="social-icon">
-                </a>
-              </li>
-            </ul>
-          </div>
+            <div class="col-lg-auto mb-4 ml-lg-auto">
+                <h4>Redes Sociais</h4>
+                <ul class="social-media-icons">
+                    <li><a href="#" aria-label="Facebook"><img src="src/imagens/facebook.png" class="social-icon" alt="Facebook"></a></li>
+                    <li><a href="#" aria-label="Twitter"><img src="src/imagens/twitter.png" class="social-icon" alt="Twitter"></a></li>
+                    <li><a href="#" aria-label="Instagram"><img src="src/imagens/instagram.png" class="social-icon" alt="Instagram"></a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </footer>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="src/js/app.js" defer></script>
-  </body>
+    </div>
+</footer>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper/popper.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="src/js/app.js" defer></script>
+</body>
+
 </html>
