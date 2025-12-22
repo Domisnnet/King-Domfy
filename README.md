@@ -126,6 +126,7 @@ O **King-Domfy** é o resultado de esforço técnico e inspiração em grandes p
 ### 🎯 Missão do Projeto
 > "Este projeto foi construído com o propósito de demonstrar que interfaces complexas podem ser recriadas com precisão utilizando tecnologias fundamentais da web, servindo de base para estudos de UI/UX e performance."
 
+
 ---
 
 <h2 id="licenca">11. 📄 Licença</h2>
