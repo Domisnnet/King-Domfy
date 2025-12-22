@@ -114,7 +114,7 @@ nav.navbar-transparente {
     color: white;
 }
 
-.conteudo-interno h2, .conteudo-interno p {
+.conteudo-interno h2, .conteudo-interno p, .conteudo-interno label {
     color: white;
 }
 
@@ -152,6 +152,27 @@ body:not(#home) .caixa {
 .btn-branco:hover {
     background-color: white;
     color: black;
+}
+
+
+/* =========================
+   Formulários
+========================= */
+.form-control {
+    background-color: #424242;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    background-color: #5a5a5a;
+    color: white;
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: #a9a9a9;
 }
 
 
