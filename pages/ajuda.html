@@ -1,229 +1,224 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="../vendor/devicons/devicons.min.css">
 
-    <!-- HTML5Shiv -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Tire suas dúvidas na Central de Ajuda do KingDomfy. Encontre respostas para as perguntas mais frequentes e entre em contato com nosso suporte.">
 
-    <link rel="stylesheet" type="text/css" href="../src/css/estilos-globais.css">
-    <title>KingDomfy - Ajuda</title>
-    <link rel="icon" href="../src/imagens/favicon.png">
-  </head>
+  <title>KingDomfy - Ajuda</title>
+  <link rel="icon" href="../src/imagens/favicon.png">
 
-  <body>
-    <header> 
-      <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
-        <div class="container">
-          <a href="../index.html" class="navbar-brand">
-          <img src="../src/imagens/KingDomfy.png" width="100">
-          </a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../vendor/devicons/devicons.min.css">
+  <link rel="stylesheet" type="text/css" href="../src/css/estilos-globais.css">
+</head>
+
+<body id="ajuda">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+      <div class="container">
+        <a href="../index.html" class="navbar-brand">
+          <img src="../src/imagens/KingDomfy.png" width="100" alt="Logo KingDomfy">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-principal" aria-controls="nav-principal" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars text-white"></i>
         </button>
         <div class="collapse navbar-collapse" id="nav-principal">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a href="premium.html" class="nav-link">Premium</a>
-            </li>
-            <li class="nav-item">
-              <a href="ajuda.html" class="nav-link">Ajuda</a>
-            </li>
-            <li class="nav-item">
-              <a href="baixar.html" class="nav-link">Baixar</a>
-            </li>
+            <li class="nav-item"><a href="premium.html" class="nav-link">Premium</a></li>
+            <li class="nav-item"><a href="ajuda.html" class="nav-link">Ajuda</a></li>
+            <li class="nav-item"><a href="baixar.html" class="nav-link">Baixar</a></li>
             <li class="nav-item divisor"></li>
-            <li class="nav-item">
-              <a href="inscrever-se.html" class="nav-link">Inscrever-se</a>
-            </li>
-            <li class="nav-item">
-              <a href="entrar.html" class="nav-link">Entrar</a>
-            </li>
+            <li class="nav-item"><a href="inscrever-se.html" class="nav-link">Inscrever-se</a></li>
+            <li class="nav-item"><a href="entrar.html" class="nav-link">Entrar</a></li>
           </ul>
         </div>
-        </div>
-      </nav>
-    </header> 
+      </div>
+    </nav>
+  </header>
 
-    <section class="caixa">
-        <div class="container">
-            <div class="conteudo-interno">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="mb-4">Central de Ajuda</h2>
-                        <p>Precisa de ajuda? Consulte nossa seção de perguntas frequentes ou entre em contato com nosso suporte.</p>
-                        <div class="accordion mt-5" id="faqAccordion">
-                            <!-- Pergunta 1 -->
-                            <div class="card bg-dark">
-                                <div class="card-header" id="headingOne">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link text-white" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            O layout é fiel ao Spotify original?
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
-                                    <div class="card-body">
-                                        O King-Domfy foi inspirado em uma versão clássica da interface do Spotify. O objetivo foi capturar a essência da marca, priorizando a organização visual e o contraste de cores, adaptando alguns elementos para melhor performance na web.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Pergunta 2 -->
-                            <div class="card bg-dark">
-                                <div class="card-header" id="headingTwo">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link text-white collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Como a responsividade foi implementada?
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
-                                    <div class="card-body">
-                                        Utilizamos o sistema de Grid e Containers do Bootstrap combinado com Media Queries personalizadas no CSS3. Isso permite que a interface se adapte de forma fluida a diferentes tamanhos de tela, do desktop ao mobile.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Pergunta 3 -->
-                            <div class="card bg-dark">
-                                <div class="card-header" id="headingThree">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link text-white collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            Posso usar este projeto no meu portfólio?
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
-                                    <div class="card-body">
-                                        Com certeza! O projeto é Open Source sob a licença MIT. Você pode clonar, estudar e usar como base para seus próprios projetos, desde que mantenha a atribuição original e os devidos créditos.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Pergunta 4 -->
-                            <div class="card bg-dark">
-                              <div class="card-header" id="headingFour">
-                                  <h5 class="mb-0">
-                                      <button class="btn btn-link text-white collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                          Por que foi usado Bootstrap?
-                                      </button>
-                                  </h5>
-                              </div>
-                              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
-                                  <div class="card-body">
-                                    A escolha do Bootstrap foi estratégica para agilizar o desenvolvimento de componentes complexos (como o menu e o carrossel) e garantir uma base sólida de acessibilidade e padronização que o framework oferece nativamente.
-                                  </div>
-                              </div>
-                          </div>
-
-                          <!-- Pergunta 5 -->
-                          <div class="card bg-dark">
-                            <div class="card-header" id="headingFive">
+  <main class="caixa">
+    <div class="container">
+        <div class="conteudo-interno">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="mb-4">Central de Ajuda</h2>
+                    <p>Precisa de ajuda? Consulte nossa seção de perguntas frequentes ou entre em contato com nosso suporte.</p>
+                    <div class="accordion mt-5" id="faqAccordion">
+                        <!-- Pergunta 1 -->
+                        <div class="card bg-dark">
+                            <div class="card-header" id="headingOne">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link text-white collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                        Como posso entrar em contato?
+                                    <button class="btn btn-link text-white" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        O layout é fiel ao Spotify original?
                                     </button>
                                 </h5>
                             </div>
-                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
                                 <div class="card-body">
-                                  A melhor forma de nos contatar para sugestões ou bugs é abrindo uma <strong>Issue</strong> no repositório oficial do projeto no GitHub. Adoramos receber feedbacks! Outra forma bastante prática é clicar no link: DomisDev que se encontra  no rodapé.
+                                    O King-Domfy foi inspirado em uma versão clássica da interface do Spotify. O objetivo foi capturar a essência da marca, priorizando a organização visual e o contraste de cores, adaptando alguns elementos para melhor performance na web.
                                 </div>
                             </div>
                         </div>
 
+                        <!-- Pergunta 2 -->
+                        <div class="card bg-dark">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-white collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Como a responsividade foi implementada?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    Utilizamos o sistema de Grid e Containers do Bootstrap combinado com Media Queries personalizadas no CSS3. Isso permite que a interface se adapte de forma fluida a diferentes tamanhos de tela, do desktop ao mobile.
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Pergunta 3 -->
+                        <div class="card bg-dark">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-white collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Posso usar este projeto no meu portfólio?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    Com certeza! O projeto é Open Source sob a licença MIT. Você pode clonar, estudar e usar como base para seus próprios projetos, desde que mantenha a atribuição original e os devidos créditos.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 4 -->
+                        <div class="card bg-dark">
+                          <div class="card-header" id="headingFour">
+                              <h5 class="mb-0">
+                                  <button class="btn btn-link text-white collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                      Por que foi usado Bootstrap?
+                                  </button>
+                              </h5>
+                          </div>
+                          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                              <div class="card-body">
+                                A escolha do Bootstrap foi estratégica para agilizar o desenvolvimento de componentes complexos (como o menu e o carrossel) e garantir uma base sólida de acessibilidade e padronização que o framework oferece nativamente.
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Pergunta 5 -->
+                      <div class="card bg-dark">
+                        <div class="card-header" id="headingFive">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-white collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Como posso entrar em contato?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                            <div class="card-body">
+                              A melhor forma de nos contatar para sugestões ou bugs é abrindo uma <strong>Issue</strong> no repositório oficial do projeto no GitHub. Adoramos receber feedbacks! Outra forma bastante prática é clicar no link: DomisDev que se encontra  no rodapé.
+                            </div>
+                        </div>
+                    </div>
+
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+  </main>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-auto mb-4">
-            <h4>company</h4>
-            <ul class="navbar-nav">
-              <li><a href="sobre.html">Sobre</a></li>
-              <li><a href="empregos.html">Empregos</a></li>
-              <li><a href="imprensa.html">Imprensa</a></li>
-              <li><a href="novidades.html">Novidades</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-auto mb-4">
-            <h4>comunidades</h4>
-            <ul class="navbar-nav">
-              <li><a href="artistas.html">Artistas</a></li>
-              <li><a href="desenvolvedores.html">Desenvolvedores</a></li>
-              <li><a href="marcas.html">Marcas</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-auto mb-4">
-            <h4>Links úteis</h4>
-            <ul class="navbar-nav">
-              <li><a href="suporte.html">Suporte</a></li>
-              <li><a href="player-da-web.html">Player da Web</a></li>
-              <li><a href="aplicativo-movel-gratis.html">Aplicativo móvel grátis</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-auto mb-4">
-            <h4>site feito com:</h4>
-            <ul id="media">
-              <li>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" class="espaco devicon-img" />
-              </li>
-              <li>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" class="espaco devicon-img" />
-              </li>
-               <li>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" class="espaco devicon-img" />
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-auto mb-4">
-            <h4>site feito por:</h4>
-            <ul class="navbar-nav">
-              <li>
-                <a href="https://github.com/Domisnnet/" target="_blank" class="navbar-link externo" id="dev">
-                  DomisDev
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-auto mb-4 ml-lg-auto">
-            <h4>Redes Sociais:</h4>
-            <ul class="social-media-icons">
-              <li>
-                <a href="">
-                  <img src="../src/imagens/facebook.png" class="social-icon">
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="../src/imagens/twitter.png" class="social-icon">
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img src="../src/imagens/instagram.png" class="social-icon">
-                </a>
-              </li>
-            </ul>
-          </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-auto mb-4">
+          <h4>Company</h4>
+          <ul class="navbar-nav">
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="empregos.html">Empregos</a></li>
+            <li><a href="imprensa.html">Imprensa</a></li>
+            <li><a href="novidades.html">Novidades</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-auto mb-4">
+          <h4>Comunidades</h4>
+          <ul class="navbar-nav">
+            <li><a href="artistas.html">Para Artistas</a></li>
+            <li><a href="desenvolvedores.html">Desenvolvedores</a></li>
+            <li><a href="marcas.html">Marcas</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-auto mb-4">
+          <h4>Links Úteis</h4>
+          <ul class="navbar-nav">
+            <li><a href="ajuda.html">Ajuda</a></li>
+            <li><a href="player-da-web.html">Player da Web</a></li>
+            <li><a href="aplicativo-movel-gratis.html">Aplicativo móvel grátis</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-auto mb-4">
+          <h4>Site feito com:</h4>
+          <ul id="media">
+            <li>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" class="espaco devicon-img" alt="HTML5">
+            </li>
+            <li>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" class="espaco devicon-img" alt="CSS3">
+            </li>
+            <li>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" class="espaco devicon-img" alt="JavaScript">
+            </li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-auto mb-4">
+          <h4>Site feito por:</h4>
+          <ul class="navbar-nav">
+            <li>
+              <a href="https://github.com/Domisnnet/" target="_blank" class="navbar-link externo" id="dev">
+                DomisDev
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-auto mb-4 ml-lg-auto">
+          <h4>Redes Sociais</h4>
+          <ul class="social-media-icons">
+            <li>
+              <a href="#" aria-label="Facebook">
+                <img src="../src/imagens/facebook.png" class="social-icon" alt="Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter">
+                <img src="../src/imagens/twitter.png" class="social-icon" alt="Twitter">
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <img src="../src/imagens/instagram.png" class="social-icon" alt="Instagram">
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/popper/popper.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../src/js/app.js" defer></script>
+    </div>
+  </footer>
+  
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/popper/popper.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../src/js/app.js" defer></script>
   </body>
-</html>
+  </html>
+  
