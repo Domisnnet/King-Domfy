@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html, body, #home {
 	height: 100%;
 	overflow-x: hidden;
@@ -179,4 +185,65 @@ h3 {
 	font-size: 2em;
 	font-weight: 700;
 	letter-spacing: -0.04em;
+}
+
+/* 
+==============================================
+	Telas pequenas e extra pequenas (até 767.98px)
+==============================================
+*/
+@media (max-width: 767.98px) {
+    /* Centraliza o conteúdo do rodapé em telas móveis */
+    footer .row > div {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    footer .row > div:last-child {
+        margin-bottom: 0;
+    }
+
+    footer .row > div ul {
+        justify-content: center;
+    }
+
+    /* Remove rotação das imagens */
+    .rotacionar {
+        transform: rotate(0deg);
+        padding-left: 0;
+    }
+}
+
+
+/* ==============================================
+   Ajustes específicos para cada tamanho de tela
+   ============================================== 
+*/
+@media (max-width: 575.98px) {
+    .btn-custom { margin: 10px 15px; font-size: 1em; }
+    h1 { font-size: 3em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
+    .albuns img { margin-bottom: 15px; }
+    .rotacionar img { margin-bottom: 15px; }
+    .carousel-control-prev i, .carousel-control-next i { font-size: 2em; }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    h1 { font-size: 3em; }
+    h2 { font-size: 2.5em; }
+    .btn-custom { margin: 10px 15px; }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    h1 { font-size: 4em; }
+    h2 { font-size: 2.8em; }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    h1 { font-size: 5em; }
+}
+
+@media (min-width: 1200px) {
+    h1 { font-size: 6em; }
 }
