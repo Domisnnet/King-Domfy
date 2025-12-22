@@ -107,10 +107,15 @@ nav.navbar-transparente {
 
 /* Conteúdo das páginas internas */
 .conteudo-interno {
-    background: white;
+    background: #282828;
     padding: 30px;
     border-radius: 15px;
     margin-top: 100px;
+    color: white;
+}
+
+.conteudo-interno h2, .conteudo-interno p {
+    color: white;
 }
 
 /* Faz o conteúdo principal crescer e empurrar o rodapé para baixo em páginas de subnível */
