@@ -24,7 +24,6 @@ body#home {
         url(../imagens/ruido.png),
         linear-gradient(50deg, #ff4169, #7c26f8);
     background-attachment: fixed;
-    height: 100%;
     overflow-x: hidden;
 }
 
@@ -98,6 +97,10 @@ nav.navbar-transparente {
 ========================= */
 .capa {
     text-align: center;
+	height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .caixa {
@@ -188,10 +191,6 @@ body:not(#home) .caixa {
 /* =========================
    Seções específicas
 ========================= */
-#home {
-    height: 100%;
-}
-
 #servicos {
     background: white;
 }
