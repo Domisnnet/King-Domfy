@@ -12,16 +12,18 @@ html {
 }
 
 body {
-    background: 
-        url(../imagens/capa.png),
-        url(../imagens/ruido.png),
-        linear-gradient(50deg, #ff4169, #7c26f8);
+    background: linear-gradient(50deg, #ff4169, #7c26f8);
     background-attachment: fixed;
     font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Layout padrão para a página inicial */
 body#home {
+    background: 
+        url(../imagens/capa.png),
+        url(../imagens/ruido.png),
+        linear-gradient(50deg, #ff4169, #7c26f8);
+    background-attachment: fixed;
     height: 100%;
     overflow-x: hidden;
 }
@@ -37,20 +39,24 @@ body:not(#home) {
 /* =========================
    Tipografia
 ========================= */
-h1 {
+h1, h2, h3 {
+    color: black;
+}
+
+body#home h1 {
     font-weight: 900;
     letter-spacing: -0.05em;
     margin-bottom: 50px;
     color: white;
 }
 
-h2 {
+body#home h2 {
     font-size: 3em;
     font-weight: 700;
     letter-spacing: -0.04em;
 }
 
-h3 {
+body#home h3 {
     font-size: 2em;
     font-weight: 700;
     letter-spacing: -0.04em;
@@ -97,6 +103,14 @@ nav.navbar-transparente {
 .caixa {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+/* Conteúdo das páginas internas */
+.conteudo-interno {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 100px;
 }
 
 /* Faz o conteúdo principal crescer e empurrar o rodapé para baixo em páginas de subnível */
@@ -265,6 +279,10 @@ footer #dev:hover {
     .rotacionar {
         transform: rotate(0deg);
         padding-left: 0;
+    }
+
+    .conteudo-interno {
+        margin-top: 80px;
     }
 }
 
