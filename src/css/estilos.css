@@ -83,12 +83,11 @@ nav.navbar-transparente {
 	background: white;
 }
 
-
-#servicos h2, h3 {
+#servicos h2, #servicos h3 {
 	color: #7c25f8;
 }
 
-#recursos, h2 {
+#recursos h2 {
 	color: white;
 }
 
@@ -113,15 +112,13 @@ footer {
 	position: relative;
 }
 
-footer #media {
-	display: flex;
-	margin-left: -15px;
-	padding-left: -0px;
+footer h4 {
+	color: #919496;
+	font-size: 1em;
+	text-transform: uppercase;
 }
 
-
 footer .navbar-nav a {
-	display: flex;
 	color: white;
 	font-size: 1em;
 }
@@ -133,17 +130,21 @@ footer .navbar-nav a:hover {
 
 footer ul {
 	list-style: none;
+  padding-left: 0;
 }
 
-footer ul li {
-	float: right;
+footer #media {
+	display: flex;
+	margin-left: -15px;
+}
+
+footer .col-md-6 ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer .col-md-6 li {
 	margin: 0px 5px;
-}
-
-footer h4 {
-	color: #919496;
-	font-size: 1em;
-	text-transform: uppercase;
 }
 
 h1 {

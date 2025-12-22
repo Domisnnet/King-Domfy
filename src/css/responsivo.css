@@ -1,31 +1,132 @@
-
+/* 
+==============================================
+		Telas extra pequenas (até 575.98px)
+==============================================
+*/
 @media (max-width: 575.98px) {
+
 	.btn-custom {
 		margin: 10px 15px;
+    font-size: 1em;
 	}
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  /* Imagens de albuns um pouco menores e com margem */
+  .albuns .col-md-6 {
+    padding: 0 15px;
+  }
+
+  .albuns img {
+    margin-bottom: 15px;
+  }
+
+  /* Remove a rotação em telas pequenas */
+  .rotacionar {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    padding-left: 0;
+  }
+
+  /* Ajusta o padding da imagem do celular */
+  .rotacionar .col-md-6 {
+    padding: 0 15px;
+  }
+
+  .rotacionar img {
+    margin-bottom: 15px;
+  }
+
+  /* Diminui os ícones do carrossel */
+  .carousel-control-prev i,
+  .carousel-control-next i {
+    font-size: 2em;
+  }
+
+  /* Centraliza o conteúdo do rodapé */
+  footer .col-md-2,
+  footer .col-md-6 {
+    text-align: center;
+  }
+
+  footer .col-md-6 ul {
+    justify-content: center;
+  }
+
+  footer h4 {
+    margin-top: 20px;
+  }
 }
 
-@media (min-width: 576px) and(max-width: 767.98px) {
+/* 
+==============================================
+		Telas pequenas (entre 576px e 767.98px)
+==============================================
+*/
+@media (min-width: 576px) and (max-width: 767.98px) {
 	h1 {
 		font-size: 3em;
 	}
+
+  h2 {
+    font-size: 2.5em;
+  }
+
 	.btn-custom {
 		margin: 10px 15px;
 	}
+
+  /* Remove a rotação */
+  .rotacionar {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    padding-left: 0;
+  }
 }
 
-@media (min-width: 768px) and(max-width: 991.98px) {
+/* 
+==============================================
+		Telas médias (entre 768px e 991.98px)
+==============================================
+*/
+@media (min-width: 768px) and (max-width: 991.98px) {
 	h1 {
 		font-size: 4em;
 	}
+
+  h2 {
+    font-size: 2.8em;
+  }
 }
 
-@media (min-width: 992px) and(max-width: 1199.98px) {
+/* 
+==============================================
+		Telas grandes (entre 992px e 1199.98px)
+==============================================
+*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
 	h1 {
 		font-size: 5em;
 	}
 }
 
+/* 
+==============================================
+		Telas extra grandes (acima de 1200px)
+==============================================
+*/
 @media (min-width: 1200px) {
 	h1 {
 		font-size: 6em;
