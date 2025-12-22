@@ -113,7 +113,7 @@ Deseja analisar a estrutura do projeto? Explore o repositório oficial:
 
 <h2 id="créditos">10. 📝 Créditos</h2>
 
-* **Desenvolvedor:** 👨‍💻 [DomisDev](https://github.com/Domisnnet).
+* **Desenvolvedor: 👨‍💻 DomisDev.**
 * **Inspiração:** 🎧 Interface clássica do Spotify.
 * **Recursos:** Bibliotecas Bootstrap, DevIcons e Font Awesome.
 
