@@ -282,6 +282,16 @@ footer #dev:hover {
     padding-top: 10px;
 }
 
+/* =========================
+   FAQ / Accordion - Arredondado e Espaçado
+========================= */
+#faqAccordion .card {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px; /* Adiciona espaçamento inferior */
+    border: none; /* Remove a borda padrão para um visual mais limpo */
+}
+
 
 /* 
 ==============================================
