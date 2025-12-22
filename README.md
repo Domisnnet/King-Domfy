@@ -87,18 +87,33 @@ Siga os passos abaixo para fortalecer este projeto:
 <h2 id="faq">8. 🧠 Perguntas Frequentes</h2>
 
 <details>
-<summary><strong>Este projeto toca música de verdade ❓</strong></summary>
-<p>🎵 <strong>Resposta:</strong> Atualmente, o King-Domfy foca na <strong>Interface (UI)</strong>. As funcionalidades de player de áudio completo estão no roadmap para versões futuras.</p>
+<summary><strong>O layout é 100% fiel ao Spotify atual ❓</strong></summary>
+<p>🎨 <strong>Resposta:</strong> O King-Domfy foi inspirado em uma versão específica (clássica) da interface. O objetivo foi capturar a essência da marca, priorizando a organização visual e o contraste de cores característico, adaptando alguns elementos para melhor performance web.</p>
 </details>
 
 <details>
-<summary><strong>Posso usar o código para meu portfólio ❓</strong></summary>
-<p>✅ <strong>Resposta:</strong> Com certeza! O projeto é open source sob licença MIT. Sinta-se à vontade para clonar e adaptar, apenas lembre-se de dar os créditos.</p>
+<summary><strong>Como foi garantida a responsividade sem usar React/Vue ❓</strong></summary>
+<p>📱 <strong>Resposta:</strong> Utilizamos o sistema de <strong>Grid e Containers do Bootstrap 5</strong> combinado com <strong>Media Queries</strong> personalizadas no CSS3. Isso permite que os cards de álbuns se reajustem de 4 colunas no Desktop para apenas 1 ou 2 no Mobile, mantendo a legibilidade.</p>
 </details>
 
 <details>
-<summary><strong>Como o layout se comporta em celulares antigos ❓</strong></summary>
-<p>📱 <strong>Resposta:</strong> Graças ao uso do Bootstrap 5, o site é altamente compatível com browsers modernos em dispositivos móveis, ajustando menus e imagens automaticamente.</p>
+<summary><strong>O carrossel de banners é otimizado ❓</strong></summary>
+<p>🔄 <strong>Resposta:</strong> Sim! Implementamos o componente <code>Carousel</code> do Bootstrap com transições via hardware acceleration (CSS transitions), o que garante que a navegação entre os banners seja suave, sem travamentos mesmo em dispositivos mais lentos.</p>
+</details>
+
+<details>
+<summary><strong>Posso utilizar este código em meu portfólio pessoal ❓</strong></summary>
+<p>🤝 <strong>Resposta:</strong> Com certeza. O projeto é <strong>Open Source</strong>. Você pode clonar, estudar a estrutura de pastas e utilizar como base para seus próprios estudos de UI, desde que mantenha a atribuição original conforme a licença MIT.</p>
+</details>
+
+<details>
+<summary><strong>Por que utilizar Bootstrap em vez de Tailwind ou CSS Puro ❓</strong></summary>
+<p>🛠️ <strong>Resposta:</strong> A escolha do Bootstrap foi estratégica para agilizar o desenvolvimento de componentes complexos (como modais e menus colapsáveis) e garantir uma base sólida de acessibilidade e padronização que o framework oferece nativamente.</p>
+</details>
+
+<details>
+<summary><strong>Como entro em contato para sugestões ou bugs ❓</strong></summary>
+<p>📩 <strong>Resposta:</strong> A melhor forma é abrindo uma <strong>Issue</strong> no repositório ou entrando em contato via perfil do GitHub. Adoramos receber feedbacks sobre melhorias na interface!</p>
 </details>
 
 ---
