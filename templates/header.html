@@ -1,20 +1,38 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
     <div class="container">
-      <a href="/index.html" class="navbar-brand">
-        <img src="../src/imagens/KingDomfy.png" width="100" alt="Logo KingDomfy">
+      <a href="{{BASE}}index.html" class="navbar-brand">
+        <img src="{{BASE}}src/imagens/KingDomfy.png" width="100" alt="Logo KingDomfy">
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-principal" aria-controls="nav-principal" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#nav-principal"
+        aria-controls="nav-principal"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <i class="fas fa-bars text-white"></i>
       </button>
       <div class="collapse navbar-collapse" id="nav-principal">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="/pages/premium.html" class="nav-link">Premium</a></li>
-          <li class="nav-item"><a href="/pages/ajuda.html" class="nav-link">Ajuda</a></li>
-          <li class="nav-item"><a href="/pages/baixar.html" class="nav-link">Baixar</a></li>
+          <li class="nav-item">
+            <a href="{{BASE}}pages/premium.html" class="nav-link">Premium</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{BASE}}pages/ajuda.html" class="nav-link">Ajuda</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{BASE}}pages/baixar.html" class="nav-link">Baixar</a>
+          </li>
           <li class="nav-item divisor"></li>
-          <li class="nav-item"><a href="/pages/inscrever-se.html" class="nav-link">Inscrever-se</a></li>
-          <li class="nav-item"><a href="/pages/entrar.html" class="nav-link">Entrar</a></li>
+          <li class="nav-item">
+            <a href="{{BASE}}pages/inscrever-se.html" class="nav-link">Inscrever-se</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{BASE}}pages/entrar.html" class="nav-link">Entrar</a>
+          </li>
         </ul>
       </div>
     </div>
