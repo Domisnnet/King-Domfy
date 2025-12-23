@@ -22,9 +22,8 @@ body {
 ========================= */
 body#home {
     background: 
-        url(../imagens/capa.png),
-        url(../imagens/ruido.png),
-        linear-gradient(50deg, #ff4169, #7c26f8);
+    url(../imagens/capa.png),url(../imagens/ruido.png),
+    linear-gradient(50deg, #ff4169, #7c26f8);
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -120,7 +119,6 @@ nav.navbar-transparente {
     color: white;
 }
 
-/* ===== ALTERAÇÃO PONTUAL: TAMANHO DO H1 ===== */
 .conteudo-interno h1 {
     font-size: 2.2em;
     font-weight: 700;
@@ -264,7 +262,6 @@ footer ul {
 footer #media,
 footer .social-media-icons {
     display: flex;
-    justify-content: center;
 }
 
 footer #media li,
@@ -282,10 +279,35 @@ footer #dev:hover {
     text-decoration: none;
 }
 
+.link-interno {
+    color: #1DB954; 
+    text-decoration: none;
+}
+
+.link-interno:hover {
+    text-decoration: underline;
+}
+
 .list-inline .divisor {
     height: 1em;
     vertical-align: middle;
 }
+
+footer .row > div {
+    text-align: center;
+    margin-bottom: 25px;
+}
+footer .row > div ul {
+    justify-content: center;
+}
+.footer-bottom {
+    flex-direction: column;
+    align-items: center;
+}
+.footer-bottom p {
+    margin-top: 1rem;
+}
+
 
 /* =========================
    Ícones e utilidades
@@ -323,35 +345,31 @@ footer #dev:hover {
 /* ===============
     Media Queryes
 ===================*/
-@media (max-width: 767.98px) {
+@media (min-width: 768px) {
     footer .row > div {
-        text-align: center;
-        margin-bottom: 25px;
-    }
-
-    footer .row > div:last-child {
+        text-align: left;
         margin-bottom: 0;
     }
-
     footer .row > div ul {
-        justify-content: center;
+        justify-content: flex-start;
     }
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer-bottom p {
+        margin-top: 0;
+    }
+}
 
+
+@media (max-width: 767.98px) {
     .rotacionar {
         transform: rotate(0deg);
         padding-left: 0;
     }
-
     .conteudo-interno {
         margin-top: 80px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-    }
-
-    .footer-bottom p {
-        margin-top: 1rem;
     }
 }
 
