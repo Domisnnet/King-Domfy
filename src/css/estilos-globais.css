@@ -274,6 +274,15 @@ footer #dev:hover {
     text-decoration: none;
 }
 
+.link-interno {
+    color: #1DB954; 
+    text-decoration: none;
+}
+
+.link-interno:hover {
+    color: #1DB954; 
+    text-decoration: none;
+}
 
 /* =========================
    Ícones e utilidades
