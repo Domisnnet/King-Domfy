@@ -114,9 +114,10 @@ nav.navbar-transparente {
 
 .conteudo-interno {
     background: #282828;
-    padding: 30px;
+    padding: 40px;
     border-radius: 15px;
     margin-top: 100px;
+    margin-bottom: 40px;
     color: white;
 }
 
@@ -124,11 +125,16 @@ nav.navbar-transparente {
     font-size: 2.2em;
     font-weight: 700;
     color: white;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.conteudo-interno h2, .conteudo-interno p, .conteudo-interno label {
-    color: white;
+.conteudo-interno h2 {
+    color: #fff;
+} 
+
+.conteudo-interno p, .conteudo-interno label {
+    color: #B3B3B3;
 }
 
 body:not(#home) .caixa {
