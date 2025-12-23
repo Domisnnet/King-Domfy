@@ -225,24 +225,24 @@ footer {
     background: #000;
     padding: 50px 0 20px 0;
     position: relative;
-    border-top: 1px solid #333; /* Adiciona uma borda sutil no topo */
+    border-top: 1px solid #333;
 }
 
 footer h4 {
     color: #919496;
     font-size: 1em;
     text-transform: uppercase;
-    margin-bottom: 15px; /* Adiciona espaçamento abaixo dos títulos */
+    margin-bottom: 15px;
 }
 
-footer .navbar-nav a {
+footer .navbar-nav a, footer .footer-bottom a {
     color: white;
     font-size: 1em;
-    transition: color 0.3s ease; /* Adiciona uma transição suave */
+    transition: color 0.3s ease;
 }
 
-footer .navbar-nav a:hover {
-    color: #9bf0e1; /* Cor de destaque ao passar o mouse */
+footer .navbar-nav a:hover, footer .footer-bottom a:hover {
+    color: #9bf0e1;
     text-decoration: none;
 }
 
@@ -254,7 +254,7 @@ footer ul {
 footer #media,
 footer .social-media-icons {
     display: flex;
-    justify-content: center; /* Centraliza os ícones */
+    justify-content: center;
 }
 
 footer #media li,
@@ -288,11 +288,11 @@ footer #dev:hover {
 .social-icon {
     width: 45px;
     padding-top: 10px;
-    transition: transform 0.3s ease; /* Adiciona uma animação suave */
+    transition: transform 0.3s ease;
 }
 
 .social-icon:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.1);
 }
 
 /* =========================
@@ -301,8 +301,8 @@ footer #dev:hover {
 #faqAccordion .card {
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 10px; /* Adiciona espaçamento inferior */
-    border: none; /* Remove a borda padrão para um visual mais limpo */
+    margin-bottom: 10px;
+    border: none;
 }
 
 
@@ -332,6 +332,14 @@ footer #dev:hover {
 
     .conteudo-interno {
         margin-top: 80px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-bottom p {
+        margin-top: 1rem;
     }
 }
 
