@@ -17,7 +17,9 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-/* Layout padrão para a página inicial */
+/* =========================
+   Layout da página inicial
+========================= */
 body#home {
     background: 
         url(../imagens/capa.png),
@@ -27,7 +29,9 @@ body#home {
     overflow-x: hidden;
 }
 
-/* Layout de rodapé fixo para outras páginas */
+/* =========================
+   Layout de rodapé fixo
+========================= */ 
 body:not(#home) {
     display: flex;
     flex-direction: column;
@@ -108,7 +112,6 @@ nav.navbar-transparente {
     padding-bottom: 20px;
 }
 
-/* Conteúdo das páginas internas */
 .conteudo-interno {
     background: #282828;
     padding: 30px;
@@ -121,7 +124,6 @@ nav.navbar-transparente {
     color: white;
 }
 
-/* Faz o conteúdo principal crescer e empurrar o rodapé para baixo em páginas de subnível */
 body:not(#home) .caixa {
     flex-grow: 1;
 }
@@ -296,7 +298,7 @@ footer #dev:hover {
 }
 
 /* =========================
-   FAQ / Accordion - Arredondado e Espaçado
+   FAQ / Accordion
 ========================= */
 #faqAccordion .card {
     border-radius: 10px;
@@ -306,11 +308,9 @@ footer #dev:hover {
 }
 
 
-/* 
-==============================================
-	Telas pequenas e extra pequenas (até 767.98px)
-==============================================
-*/
+/* ===============
+    Media Queryes
+===================*/
 @media (max-width: 767.98px) {
     footer .row > div {
         text-align: center;
@@ -343,10 +343,6 @@ footer #dev:hover {
     }
 }
 
-
-/* ==============================================
-   Ajustes específicos para cada tamanho de tela
-============================================== */
 @media (max-width: 575.98px) {
     .btn-custom { margin: 10px 15px; font-size: 1em; }
     h1 { font-size: 3em; }
