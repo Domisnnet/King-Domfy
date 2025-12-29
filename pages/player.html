@@ -3,23 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="KingDomfy Web Player - Ouça suas músicas favoritas diretamente do navegador.">
   <title>KingDomfy - Web Player</title>
   <link rel="icon" href="../src/imagens/favicon.png">
   <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../vendor/devicons/devicons.min.css">
   <link rel="stylesheet" type="text/css" href="../src/css/estilos-globais.css">
 </head>
 <body id="player" data-base="../">
   <div id="header-placeholder"></div>
   <main class="caixa">
     <div class="container">
-      <div class="conteudo-interno">
-        <div class="row">
-          <div class="col-md-12">
-            <h2>Web Player</h2>
-            <p>Em construção... O player de música estará disponível em breve!</p>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 class="mb-5 fw-bold text-white">Tocando Agora</h2>
+          <div class="player-container">
+            <div class="album-art shadow">
+              <img src="https://via.placeholder.com/300/7F5AF0/FFFFFF?text=KingDomfy" alt="Capa do Álbum">
+            </div>
+            <div class="song-details text-center mb-4">
+              <h4 class="mb-1 fw-bold text-white">Smooth Jazz Vibes</h4>
+              <p class="text-muted">Artista Exemplo</p>
+            </div>
+            <div class="progress-wrapper mb-4">
+              <div class="progress-bar-custom">
+                <div class="progress-fill" style="width: 35%;"></div>
+              </div>
+              <div class="time-info">
+                <span>1:45</span>
+                <span>3:30</span>
+              </div>
+            </div>
+            <div class="player-controls">
+              <button class="btn-control"><i class="fas fa-random"></i></button>
+              <button class="btn-control"><i class="fas fa-step-backward"></i></button>
+              <button id="btnPlayPause" class="btn-main-player">
+                <svg id="svgPlay" width="70" height="70" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="30" cy="30" r="28.5" stroke="currentColor" stroke-width="3"/>
+                  <path d="M41 30L25 20V40L41 30Z" fill="currentColor"/>
+                </svg>
+                <svg id="svgPause" width="70" height="70" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="30" cy="30" r="28.5" stroke="currentColor" stroke-width="3"/>
+                  <rect x="22" y="19" width="5" height="22" rx="1" fill="currentColor"/>
+                  <rect x="33" y="19" width="5" height="22" rx="1" fill="currentColor"/>
+                </svg>
+              </button>
+              <button class="btn-control"><i class="fas fa-step-forward"></i></button>
+              <button class="btn-control"><i class="fas fa-redo"></i></button>
+            </div>
           </div>
         </div>
       </div>
@@ -27,9 +57,7 @@
   </main>
   <div id="footer-placeholder"></div>
   <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/popper/popper.min.js"></script>
   <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="../src/js/app.js" defer></script>
-  <script src="../src/js/template-loader.js" defer></script>
 </body>
 </html>
