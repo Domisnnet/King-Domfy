@@ -5,43 +5,43 @@ let isPlaying = false;
 const playlist = [
     {
         titulo: "Hino 1 - Hino da Jornada",
-        caminho: "../src/media/Hino 1 - Hino da Jornada.mp3"
+        caminho: "../src/media/hino1.mp3"
     },
     {
         titulo: "Hino 2 - A estrada é longa, mas eu sigo",
-        caminho: "../src/media/Hino 2 - A estrada é longa, mas eu sigo.mp3"
+        caminho: "../src/media/hino2.mp3"
     },
     {
         titulo: "Hino 3 - Em Tua Vida, Deus",
-        caminho: "../src/media/Hino 3 - Em Tua Vida, Deus.mp3"
+        caminho: "../src/media/hino3.mp3"
     },
     {
         titulo: "Hino 4 - Siga adiante, não desanima",
-        caminho: "../src/media/Hino 4 - Siga adiante, não desanima.mp3"
+        caminho: "../src/media/hino4.mp3"
     },
     {
         titulo: "Hino 5 - Eu só queria, Senhor!",
-        caminho: "../src/media/Hino 5 - Eu só queria, Senhor!.mp3"
+        caminho: "../src/media/hino5.mp3"
     },
     {
         titulo: "Hino 6 - Às vezes eu me sinto assim",
-        caminho: "../src/media/Hino 6 - Às vezes eu me sinto assim.mp3"
+        caminho: "../src/media/hino6-.mp3"
     },
     {
-        titulo: "Hino 7 - Só Tu és, Senhor",
-        caminho: "../src/media/Hino 7 - Só Tu és, Senhor.mp3"
+        titulo: "Hino 7 - O Sangue de Cristo Conhecido",
+        caminho: "../src/media/hino7.mp3"
     },
     {
-        titulo: "Hino 8 - Eu Te busquei, Senhor",
-        caminho: "../src/media/Hino 8 - Eu Te busquei, Senhor.mp3"
+        titulo: "Hino 8 - O Amor aqui, esfriando está",
+        caminho: "../src/media/hino8.mp3"
     },
     {
-        titulo: "Hino 9 - Eu Te amo, ó Deus",
-        caminho: "../src/media/Hino 9 - Eu Te amo, ó Deus.mp3"
+        titulo: "Hino 9 - Hoje é tão Difícil",
+        caminho: "../src/media/hino9.mp3"
     },
     {
-        titulo: "Hino 10 - Pelo-sangue-purificado",
-        caminho: "../src/media/Hino 10 - Pelo-sangue-purificado.mp3"
+        titulo: "Hino 10 - Pelo Sangue purificado",
+        caminho: "../src/media/hino10.mp3"
     }
 ];
 
