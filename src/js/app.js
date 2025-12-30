@@ -38,6 +38,10 @@ const playlist = [
     {
         titulo: "Hino 9 - Eu Te amo, ó Deus",
         caminho: "../src/media/Hino 9 - Eu Te amo, ó Deus.mp3"
+    },
+    {
+        titulo: "Hino 10 - Pelo-sangue-purificado",
+        caminho: "../src/media/Hino 10 - Pelo-sangue-purificado.mp3"
     }
 ];
 
