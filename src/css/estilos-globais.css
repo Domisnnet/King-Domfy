@@ -243,6 +243,12 @@ body#player {
     margin-top: 10px;
 }
 
+.active-control {
+    color: #1db954 !important; 
+    text-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
+    transform: scale(1.1);
+}
+
 .btn-control {
     background: none; 
     border: none; 
