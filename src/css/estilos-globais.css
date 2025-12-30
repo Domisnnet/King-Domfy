@@ -169,7 +169,8 @@ body:not(#home) .caixa {
    KINGDOMFY PLAYER
 ========================= */ 
 :root {
-    --brand-purple: #7F5AF0; 
+    --brand-green: #015f01; 
+    --brand-orange: #d29f00;
     --brand-card: #181818;
     --text-muted: #b3b3b3;
 }
@@ -230,7 +231,7 @@ body#player {
 
 .progress-fill {
     height: 100%;
-    background: var(--brand-purple);
+    background: var(--brand-green);
     width: 0%;
 }
 
@@ -252,21 +253,21 @@ body#player {
 }
 
 .btn-control:hover { 
-    color: white; 
+    color: var(--brand-orange);
     transform: scale(1.1); 
 }
 
 .btn-main-player {
     background: none; 
     border: none; 
-    color: var(--brand-purple);
+    color: var(--brand-green);
     cursor: pointer; 
     transition: 0.2s;
 }
 
 .btn-main-player:hover { 
     transform: scale(1.05); 
-    color: white; 
+    color: var(--brand-orange);
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
