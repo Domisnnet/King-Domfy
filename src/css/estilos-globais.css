@@ -177,11 +177,10 @@ body:not(#home) .caixa {
 body#player {
     background: linear-gradient(50deg, #ff4169, #7c26f8);
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     display: flex;
     flex-direction: column;
-    overflow: hidden; 
 }
 
 .caixa-player {
@@ -189,12 +188,12 @@ body#player {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 150px 20px 60px 20px;
 }
 
 .player-container {
     width: 100%;
-    max-width: 360px; 
+    max-width: 340px; 
     background: var(--brand-card);
     padding: 25px;
     border-radius: 24px;
@@ -270,9 +269,30 @@ body#player {
     color: white; 
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .caixa-player {
+        padding-top: 180px;
+    }
+    .player-container {
+        max-width: 700px;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+    .album-art {
+        width: 250px;
+        margin-bottom: 0;
+    }
+    .player-content-wrapper {
+        flex: 1;
+    }
+}
 
-/* Media Queryes */
 @media (min-width: 992px) {
+    .caixa-player {
+        padding-top: 120px;
+    }
+
     .player-container {
         max-width: 800px; 
         flex-direction: row;
