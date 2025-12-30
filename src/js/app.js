@@ -131,3 +131,5 @@ const initPlayer = () => {
     // Init
     carregarMusica(indiceAtual);
 };
+
+document.addEventListener('DOMContentLoaded', initPlayer);
