@@ -11,35 +11,41 @@
   <link rel="stylesheet" href="vendor/devicons/devicons.min.css">
   <link rel="stylesheet" href="src/css/estilos-globais.css">
 </head>
-<body id="home" data-base="./">
+<body id="home" class="page-home" data-base="./">
   <div id="header-placeholder"></div>
-  <main>
-    <section id="capa" class="capa">
+  <main class="main-content">
+    <section id="capa" class="capa section-hero">
       <div class="container">
         <div id="carousel-spotify" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <h1>Música para todos</h1>
-              <a href="pages/inscrever-se.html" class="btn btn-lg btn-custom btn-roxo">Aproveite o KingDomfy Free</a>
-              <a href="pages/premium.html" class="btn btn-lg btn-custom btn-branco">Obter KingDomfy Premium</a>
+              <a href="pages/inscrever-se.html" class="btn btn-lg btn-custom btn-roxo">
+                Aproveite o KingDomfy Free
+              </a>
+              <a href="pages/premium.html" class="btn btn-lg btn-custom btn-branco">
+                Obter KingDomfy Premium
+              </a>
             </div>
             <div class="carousel-item">
               <h1>As melhores rádios</h1>
-              <a href="pages/premium.html" class="btn btn-lg btn-custom btn-branco"><i class="fas fa-play"></i> Ouça agora</a>
+              <a href="pages/premium.html" class="btn btn-lg btn-custom btn-branco">
+                <i class="fas fa-play"></i> Ouça agora
+              </a>
             </div>
           </div>
-          <a href="#carousel-spotify" class="carousel-control-prev" role="button" data-slide="prev">
+          <a class="carousel-control-prev" href="#carousel-spotify" role="button" data-slide="prev">
             <i class="fas fa-angle-left fa-3x"></i>
             <span class="sr-only">Anterior</span>
           </a>
-          <a href="#carousel-spotify" class="carousel-control-next" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#carousel-spotify" role="button" data-slide="next">
             <i class="fas fa-angle-right fa-3x"></i>
             <span class="sr-only">Próximo</span>
           </a>
         </div>
       </div>
     </section>
-    <section id="servicos" class="caixa">
+    <section id="servicos" class="caixa section-services">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -60,37 +66,41 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 services-content">
             <h2>O que o KingDomfy tem?</h2>
             <h3>Músicas</h3>
-            <p>O KingDomfy tem milhões de músicas. Escute seus sons favoritos, descubra novas músicas e reúna seus favoritos em um só lugar.</p>
+            <p>O KingDomfy tem milhões de músicas...</p>
+
             <h3>Playlists</h3>
-            <p>No KingDomfy você encontra uma playlist para cada momento. Todas feitas por fanáticos e especialistas da música.</p>
+            <p>No KingDomfy você encontra uma playlist para cada momento...</p>
+
             <h3>Novos lançamentos</h3>
-            <p>Escute os novos lançamentos de singles e álbuns da semana e veja o que está bombando no Top 50.</p>
+            <p>Escute os novos lançamentos de singles e álbuns da semana...</p>
           </div>
         </div>
       </div>
     </section>
-    <section id="recursos" class="caixa">
+    <section id="recursos" class="caixa section-resources">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <h2>Fácil</h2>
             <h3>Buscar</h3>
-            <p>Já sabe o que quer escutar? É só procurar e apertar o play.</p>
+            <p>Já sabe o que quer escutar?...</p>
+
             <h3>Navegar</h3>
-            <p>Veja os novos lançamentos, o que está bombando nas paradas e as melhores playlists para o seu momento.</p>
+            <p>Veja os novos lançamentos...</p>
+
             <h3>Descobrir</h3>
-            <p>Curta músicas novas toda segunda-feira com uma playlist personalizada para você. Ouça os últimos lançamentos de seus artistas favoritos.</p>
+            <p>Curta músicas novas toda segunda-feira...</p>
           </div>
           <div class="col-md-8">
-            <div class="row rotacionar">
+            <div class="row rotacionar resources-images">
               <div class="col-md-6">
-                <img src="src/imagens/iphone1.png" class="img-fluid" alt="iPhone com KingDomfy App">
+                <img src="src/imagens/iphone1.png" class="img-fluid" alt="iPhone App">
               </div>
               <div class="col-md-6">
-                <img src="src/imagens/iphone2.png" class="img-fluid" alt="iPhone com KingDomfy App em outra tela">
+                <img src="src/imagens/iphone2.png" class="img-fluid" alt="iPhone App">
               </div>
             </div>
           </div>
@@ -102,7 +112,7 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/popper/popper.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="../src/js/app.js" defer></script>
+  <script src="src/js/app.js" defer></script>
   <script src="src/js/template-loader.js" defer></script>
 </body>
 </html>
