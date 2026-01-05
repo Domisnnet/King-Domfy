@@ -1,0 +1,234 @@
+/* =========================
+   KINGDOMFY PLAYER
+========================= */
+
+/* Contexto da página */
+body#player {
+    background: linear-gradient(50deg, #ff4169, #7c26f8);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   Estrutura
+========================= */
+.caixa-player {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 20px 60px;
+}
+
+.player-container {
+    width: 100%;
+    max-width: 340px;
+    background: var(--brand-card);
+    padding: 25px;
+    border-radius: 24px;
+    border: 1px solid #282828;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* =========================
+   Álbum
+========================= */
+.album-art {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.album-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================
+   Conteúdo
+========================= */
+.player-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.song-details {
+    text-align: center;
+    color: white;
+}
+
+/* =========================
+   Barra de progresso
+========================= */
+.progress-bar-custom {
+    width: 100%;
+    height: 6px;
+    background: #333;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--brand-green);
+}
+
+/* =========================
+   Controles
+========================= */
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-control {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.btn-control:hover {
+    color: var(--brand-orange);
+    transform: scale(1.1);
+}
+
+.btn-main-player {
+    background: none;
+    border: none;
+    color: var(--brand-green);
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.btn-main-player:hover {
+    color: var(--brand-orange);
+    transform: scale(1.05);
+}
+
+.active-control {
+    color: #1db954 !important;
+    text-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
+    transform: scale(1.1);
+}
+
+/* =========================
+   Volume
+========================= */
+.volume-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    color: var(--text-muted);
+}
+
+#volumeIcon {
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+#volumeIcon:hover {
+    color: var(--brand-orange);
+    transform: scale(1.1);
+}
+
+.volume-control input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 4px;
+    background: #535353;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.volume-control input[type="range"]:hover {
+    opacity: 1;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: var(--brand-green);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-control input[type="range"]::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: var(--brand-green);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* =========================
+   Responsividade
+========================= */
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .caixa-player {
+        padding-top: 180px;
+    }
+
+    .player-container {
+        max-width: 700px;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .album-art {
+        width: 250px;
+    }
+
+    .song-details {
+        text-align: left;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .caixa-player {
+        padding-top: 120px;
+    }
+
+    .player-container {
+        max-width: 800px;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        padding: 40px;
+        min-height: 400px;
+    }
+
+    .album-art {
+        width: 320px;
+    }
+
+    .song-details {
+        text-align: left;
+    }
+}
