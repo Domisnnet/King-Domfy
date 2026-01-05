@@ -85,10 +85,6 @@ nav.navbar {
     padding: 15px;
     margin: 20px;
 }
-
-.footer-link {
-    padding: 5px 0;
-}
   
 .divisor {
     width: 1px;
@@ -474,6 +470,10 @@ footer .social-media-icons li {
     margin: 0 10px;
 }
 
+.footer-link {
+    padding: 5px 0;
+}
+
 #dev {
     font-size: 23px;
     color: white;
@@ -488,7 +488,8 @@ footer .social-media-icons li {
 }
 
 .link-interno:hover {
-    text-decoration: underline;
+    color: #1DB954;
+    text-decoration: none;
 }
 
 .list-inline .divisor {
@@ -545,6 +546,43 @@ footer .row > div ul {
     overflow: hidden;
     margin-bottom: 10px;
     border: none;
+}
+
+/* =========================
+    FAQ / Accordion Dark Theme
+========================= */
+#centro-de-privacidade #faqAccordion .card {
+    background-color: #343a40;
+    border: 1px solid #454d55;
+}
+
+#centro-de-privacidade #faqAccordion .card-header {
+    background-color: #343a40;
+    border-bottom: 1px solid #454d55;
+}
+
+#centro-de-privacidade #faqAccordion .btn-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+#centro-de-privacidade #faqAccordion .btn-link:hover {
+    color: #9bf0e1;
+}
+
+#centro-de-privacidade #faqAccordion .card-body {
+    background-color: #282828;
+    color: #fff;
+}
+
+#centro-de-privacidade #faqAccordion .btn-sm {
+    color: #fff;
+    border-color: #fff;
+}
+
+#centro-de-privacidade #faqAccordion .btn-sm:hover {
+    color: #000;
+    background-color: #fff;
 }
   
 /* ===============
