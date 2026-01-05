@@ -76,7 +76,7 @@ nav.navbar {
 }
   
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #9bf0e1;
+    color: white;
 }
   
 .navbar-light .navbar-toggler {
@@ -428,106 +428,107 @@ body#player {
 }
   
 /* =========================
-    Footer
+   Footer
 ========================= */
 footer {
     background: #000;
-    padding: 50px 0 20px 0;
+    padding: 50px 0 20px;
     position: relative;
     border-top: 1px solid #333;
 }
-  
+
 footer h4 {
     color: #919496;
     font-size: 1em;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
-  
-footer .navbar-nav a, footer .footer-bottom a {
+
+footer a {
     color: white;
     font-size: 1em;
     transition: color 0.3s ease;
 }
-  
-footer .navbar-nav a:hover, footer .footer-bottom a:hover {
+
+footer a:hover {
     color: #9bf0e1;
     text-decoration: none;
 }
-  
+
 footer ul {
     list-style: none;
     padding-left: 0;
 }
-  
-footer #media, footer .social-media-icons {
+
+footer #media,
+footer .social-media-icons {
     display: flex;
 }
-  
-footer #media li, footer .social-media-icons li {
+
+footer #media li,
+footer .social-media-icons li {
     margin: 0 10px;
 }
-  
+
 #dev {
     font-size: 23px;
     color: white;
 }
-  
-footer #dev:hover {
+
+#dev:hover {
     color: #9bf0e1;
-    text-decoration: none;
 }
-  
+
 .link-interno {
-    color: #1DB954; 
-    text-decoration: none;
+    color: #1DB954;
 }
-  
+
 .link-interno:hover {
     text-decoration: underline;
 }
-  
+
 .list-inline .divisor {
     height: 1em;
     vertical-align: middle;
 }
-  
+
 footer .row > div {
     text-align: center;
     margin-bottom: 25px;
 }
-  
+
 footer .row > div ul {
     justify-content: center;
 }
-  
+
 .footer-bottom {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
-  
+
 .footer-bottom p {
     margin-top: 1rem;
 }
-  
+
 /* =========================
-    Ícones e utilidades
+   Ícones e utilidades
 ========================= */
 .externo::after {
     content: '\1F517';
 }
-  
+
 .devicon-img {
     width: 60px;
     height: 55px;
 }
-  
+
 .social-icon {
     width: 45px;
     padding-top: 10px;
     transition: transform 0.3s ease;
 }
-  
+
 .social-icon:hover {
     transform: scale(1.1);
 }
