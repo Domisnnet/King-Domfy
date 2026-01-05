@@ -32,6 +32,7 @@ const initPlayer = () => {
   const displayCapa = document.querySelector('.album-art img');
   const timeCurrent = document.getElementById('currentTime');
   const timeTotal = document.getElementById('totalDuration');
+  const volumeSlider = document.getElementById('volumeSlider');
 
   const formatarTempo = (segundos) => {
     const min = Math.floor(segundos / 60);
@@ -110,7 +111,12 @@ const initPlayer = () => {
 
   audio.addEventListener('ended', proximaMusica);
 
+  volumeSlider.addEventListener('input', () => {
+    audio.volume = volumeSlider.value;
+  });
+
   carregarMusica(indiceAtual);
+  audio.volume = volumeSlider.value;
 };
 
 document.addEventListener('DOMContentLoaded', initPlayer);
