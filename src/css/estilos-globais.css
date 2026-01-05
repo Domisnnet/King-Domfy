@@ -85,6 +85,10 @@ nav.navbar {
     padding: 15px;
     margin: 20px;
 }
+
+.footer-link {
+    padding: 5px 0;
+}
   
 .divisor {
     width: 1px;
