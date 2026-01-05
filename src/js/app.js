@@ -33,6 +33,7 @@ const initPlayer = () => {
   const timeCurrent = document.getElementById('currentTime');
   const timeTotal = document.getElementById('totalDuration');
   const volumeSlider = document.getElementById('volumeSlider');
+  const volumeIcon = document.getElementById('volumeIcon');
 
   const formatarTempo = (segundos) => {
     const min = Math.floor(segundos / 60);
@@ -113,6 +114,24 @@ const initPlayer = () => {
 
   volumeSlider.addEventListener('input', () => {
     audio.volume = volumeSlider.value;
+    if (audio.volume === 0) {
+      volumeIcon.className = 'fas fa-volume-mute';
+    } else if (audio.volume < 0.5) {
+      volumeIcon.className = 'fas fa-volume-down';
+    } else {
+      volumeIcon.className = 'fas fa-volume-up';
+    }
+  });
+
+  volumeIcon.addEventListener('click', () => {
+    audio.muted = !audio.muted;
+    if (audio.muted) {
+      volumeIcon.className = 'fas fa-volume-mute';
+      volumeSlider.value = 0;
+    } else {
+      volumeIcon.className = 'fas fa-volume-up';
+      volumeSlider.value = audio.volume;
+    }
   });
 
   carregarMusica(indiceAtual);
