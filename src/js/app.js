@@ -5,6 +5,7 @@ let isShuffle = false;
 let isRepeat = false;
 
 const playlist = [
+  { titulo: "Capa do Álbum", caminho: "../src/imagens/melodias-da-alma.jpeg", capa: "../src/imagens/melodias-da-alma.jpeg"},
   { titulo: "Hino 1 - Hino da Jornada", caminho: "../src/media/hino1.mp3", capa: "../src/imagens/img1.jpeg" },
   { titulo: "Hino 2 - A estrada é longa, mas eu sigo", caminho: "../src/media/hino2.mp3", capa: "../src/imagens/img2.jpeg" },
   { titulo: "Hino 3 - Em Tua Vida, Deus", caminho: "../src/media/hino3.mp3", capa: "../src/imagens/img3.jpeg" },
