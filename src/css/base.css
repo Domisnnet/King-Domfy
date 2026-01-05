@@ -1,0 +1,36 @@
+/* =========================
+   Reset e base
+========================= */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: linear-gradient(50deg, #ff4169, #7c26f8);
+    background-attachment: fixed;
+}
+
+/* =========================
+   Variáveis globais
+========================= */
+:root {
+    --brand-green: #015f01;
+    --brand-orange: #d29f00;
+    --brand-card: #181818;
+    --text-muted: #b3b3b3;
+}
+
+/* =========================
+   Tipografia base e layout
+========================= */
+h1, h2, h3 {
+    font-weight: 700;
+    color: black;
+}
