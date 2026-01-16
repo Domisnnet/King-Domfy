@@ -21,9 +21,7 @@ body {
   Layout da página inicial
 ========================= */
 body#home {
-  background:
-    url(../imagens/capa.png), url(../imagens/ruido.png),
-    linear-gradient(50deg, #ff4169, #7c26f8);
+  background: url(../imagens/capa.png), url(../imagens/ruido.png), linear-gradient(50deg, #ff4169, #7c26f8);
   background-attachment: fixed;
   overflow-x: hidden;
 }
@@ -90,9 +88,28 @@ nav.navbar {
 
 .divisor {
   width: 1px;
+  height: 15px;
   background: white;
   margin: 12px 15px;
 }
+
+.navbar-nav .btn-custom {
+  background: var(--brand-green);
+  color: var(--text-muted);
+  border: 2px solid var(--brand-orange);
+  font-weight: bold !important;
+  border-radius: 500px !important;
+  padding: 6px 35px !important;
+  margin-left: 25px !important;
+  transition: background-color 0.3s, border-color 0.3s !important;
+}
+
+.navbar-nav .btn-custom:hover {
+  background: var(--brand-orange);
+  color: var(--text-muted);
+  border: 2px solid var(--brand-green);
+}
+
 
 /* =========================
   Capa e layout geral
@@ -539,7 +556,7 @@ footer .row>div ul {
   Ícones e utilidades
   ========================= */
 .externo::after {
-  content: "\1F517";
+  content: '\1F517';
 }
 
 .img-valor {
