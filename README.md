@@ -82,6 +82,12 @@ Siga os passos abaixo para fortalecer este projeto:
 | **04** | **Push** | `git push origin feature/MinhaMelhoria` |
 | **05** | **PR** | [![Abrir PR](https://img.shields.io/badge/-Abrir%20PR-green?style=flat-square&logo=git)](https://github.com/Domisnnet/King-Domfy/compare) |
 
+### 🐛 Encontrou um problema?
+Se algo não estiver funcionando como esperado, não hesite em abrir um chamado:
+
+[![Issues Abertas](https://img.shields.io/github/issues/Domisnnet/King-Domfy?style=flat-square&color=red&logo=github)](https://github.com/Domisnnet/King-Domfy/issues)
+[![Report Bug](https://img.shields.io/badge/Reportar-Erro-critical?style=flat-square&logo=github)](https://github.com/Domisnnet/King-Domfy/issues/new)
+
 ---
 
 <h2 id="faq">8. 🧠 Perguntas Frequentes</h2>
