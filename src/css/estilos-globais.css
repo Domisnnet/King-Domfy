@@ -726,11 +726,9 @@ footer .row>div ul {
   }
 }
 
-/* =========================
+/* =================================
   Ajustes Responsivos da Navbar
-========================= */
-
-/* Desktop - Centraliza os links */
+================================= */
 @media (min-width: 992px) {
   .navbar-collapse {
     flex-grow: 1;
@@ -742,7 +740,6 @@ footer .row>div ul {
   }
 }
 
-/* Tablet e Mobile - Ajusta o menu hamburguer */
 @media (max-width: 991.98px) {
   .navbar-nav {
     text-align: center;
@@ -752,11 +749,11 @@ footer .row>div ul {
     margin: 10px 0;
   }
   .navbar-nav .btn-custom {
-    padding: 10px 20px !important;
+    padding: 0px 40px !important;
     font-size: 1rem !important;
     margin: 10px auto !important;
     display: block;
-    width: 80%;
+    width: fit-content;
   }
   .divisor {
     display: none;
