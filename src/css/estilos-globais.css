@@ -21,9 +21,7 @@ body {
   Layout da página inicial
 ========================= */
 body#home {
-  background:
-    url(../imagens/capa.png), url(../imagens/ruido.png),
-    linear-gradient(50deg, #ff4169, #7c26f8);
+  background: url(../imagens/capa.png), url(../imagens/ruido.png), linear-gradient(50deg, #ff4169, #7c26f8);
   background-attachment: fixed;
   overflow-x: hidden;
 }
