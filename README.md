@@ -4,7 +4,7 @@
 ![Tecnologias](https://img.shields.io/badge/Tecnologias-HTML%20%7C%20CSS%20%7C%20JS%20%7C%20Bootstrap-blueviolet)
 [![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/King-Domfy/blob/main/LICENSE)
 
-![King-Domfy](src/imagens/iMac-24-1120x630.png)
+![King-Domfy](src/imagens/King-Domfy.png)
 
 Bem-vindo ao **King-Domfy**! Uma recriação de interface inspirada no Spotify, focada em entregar uma experiência de usuário fluida, com design responsivo e componentes modernos. Explore playlists, álbuns e uma interface pensada para todos os dispositivos.
 
@@ -82,6 +82,12 @@ Siga os passos abaixo para fortalecer este projeto:
 | **04** | **Push** | `git push origin feature/MinhaMelhoria` |
 | **05** | **PR** | [![Abrir PR](https://img.shields.io/badge/-Abrir%20PR-green?style=flat-square&logo=git)](https://github.com/Domisnnet/King-Domfy/compare) |
 
+### 🐛 Encontrou um problema?
+Se algo não estiver funcionando como esperado, não hesite em abrir um chamado:
+
+[![Issues Abertas](https://img.shields.io/github/issues/Domisnnet/King-Domfy?style=flat-square&color=red&logo=github)](https://github.com/Domisnnet/King-Domfy/issues)
+[![Report Bug](https://img.shields.io/badge/Reportar-Erro-critical?style=flat-square&logo=github)](https://github.com/Domisnnet/King-Domfy/issues/new)
+
 ---
 
 <h2 id="faq">8. 🧠 Perguntas Frequentes</h2>
@@ -152,4 +158,6 @@ Este projeto está licenciado sob a [![Licença MIT](https://img.shields.io/badg
 
 <h2 id="perfil-do-github">12. 👨‍💻 Perfil do GitHub</h2>
 
-<a href="https://github.com/Domisnnet"> <img src="src/imagens/DomisDev.png" width="120" alt="Acessar perfil GitHub"> </a>
+<a href="https://github.com/Domisnnet"> 
+  <img src="src/imagens/DomisDev.png" width="120" alt="Acessar perfil GitHub"> 
+</a>
