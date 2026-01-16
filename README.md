@@ -4,7 +4,7 @@
 ![Tecnologias](https://img.shields.io/badge/Tecnologias-HTML%20%7C%20CSS%20%7C%20JS%20%7C%20Bootstrap-blueviolet)
 [![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/King-Domfy/blob/main/LICENSE)
 
-![King-Domfy](src/imagens/kingdomfy.png)
+![King-Domfy](src/imagens/King-Domfy.png)
 
 Bem-vindo ao **King-Domfy**! Uma recriação de interface inspirada no Spotify, focada em entregar uma experiência de usuário fluida, com design responsivo e componentes modernos. Explore playlists, álbuns e uma interface pensada para todos os dispositivos.
 
