@@ -89,7 +89,7 @@ nav.navbar {
 .divisor {
   width: 1px;
   height: 15px;
-  background: white;
+  background: var(--text-muted);
   margin: 12px 15px;
 }
 
@@ -99,14 +99,13 @@ nav.navbar {
   border: 2px solid var(--brand-orange);
   font-weight: bold !important;
   border-radius: 500px !important;
-  padding: 6px 35px !important;
+  padding: 0px 25px !important;
   margin-left: 25px !important;
   transition: background-color 0.3s, border-color 0.3s !important;
 }
 
 .navbar-nav .btn-custom:hover {
   background: var(--brand-orange);
-  color: var(--text-muted);
   border: 2px solid var(--brand-green);
 }
 
@@ -724,5 +723,42 @@ footer .row>div ul {
 @media (min-width: 1200px) {
   h1 {
     font-size: 6em;
+  }
+}
+
+/* =========================
+  Ajustes Responsivos da Navbar
+========================= */
+
+/* Desktop - Centraliza os links */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar-nav {
+    align-items: center;
+  }
+}
+
+/* Tablet e Mobile - Ajusta o menu hamburguer */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+  .navbar-nav .btn-custom {
+    padding: 10px 20px !important;
+    font-size: 1rem !important;
+    margin: 10px auto !important;
+    display: block;
+    width: 80%;
+  }
+  .divisor {
+    display: none;
   }
 }
