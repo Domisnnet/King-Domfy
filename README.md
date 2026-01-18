@@ -139,7 +139,7 @@ O **King-Domfy** é o resultado de esforço técnico e inspiração em grandes p
 | Atribuição | Responsável / Recurso | Descrição |
 | :--- | :--- | :--- |
 | **Arquitetura & Dev** | **DomisDev** | Idealização, estruturação do código e implementação da lógica responsiva. |
-| **Identidade Visual** | **Spotify Inc.** | Referência de Design System, paleta de cores e UX (User Experience). |
+| **Identidade Visual** | **Spotify Inc.** | Referência de Design System, paleta de cores e UX. |
 | **Engine Gráfica** | **Bootstrap & CSS3** | Fornecimento dos componentes de layout e estilização moderna. |
 | **Assets Visuais** | **Font Awesome & Devicons** | Ícones de alta fidelidade que compõem a estética da interface. |
 | **Aprendizado** | **Comunidade Dev** | Baseado em princípios de Clean Code e boas práticas de Front-end. |
