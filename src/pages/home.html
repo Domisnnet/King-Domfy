@@ -2,42 +2,44 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Entre no KingDomfy para continuar. Acesse sua conta e aproveite o melhor do streaming de música.">
-  <title>KingDomfy - Entrar</title>
-  <link rel="icon" href="<%= require('../assets/imagens/favicon.png') %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Entre no KingDomfy para continuar.">
+  <title>KingDomfy</title>
+  <link rel="icon" href="/assets/imagens/favicon.png">
 </head>
-<body id="home" class="page-home">
-  <%= require('../partials/header.html') %>
+<body id="home">
+  <div id="header-placeholder"></div>
   <main class="main-content">
     <section id="capa" class="capa section-hero">
       <div class="container">
-        <div id="carousel-spotify" class="carousel slide" data-ride="carousel">
+        <div id="carousel-spotify" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <h1>Música para todos</h1>
-              <a href="pages/inscrever-se.html" class="btn btn-lg btn-custom btn-roxo">
+              <a href="/pages/inscrever-se.html" class="btn btn-lg btn-custom btn-roxo">
                 Aproveite o KingDomfy Free
               </a>
-              <a href="pages/premium.html" class="btn btn-lg btn-custom btn-branco">
+              <a href="/pages/premium.html" class="btn btn-lg btn-custom btn-branco">
                 Obter KingDomfy Premium
               </a>
             </div>
             <div class="carousel-item">
               <h1>As melhores rádios</h1>
-              <a href="pages/premium.html" class="btn btn-lg btn-custom btn-branco">
-                <i class="fas fa-play"></i> Ouça agora
+              <a href="/pages/premium.html" class="btn btn-lg btn-custom btn-branco">
+                <i class="fas fa-play"></i>Ouça agora
               </a>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carousel-spotify" role="button" data-slide="prev">
-            <i class="fas fa-angle-left fa-3x"></i>
-            <span class="sr-only">Anterior</span>
-          </a>
-          <a class="carousel-control-next" href="#carousel-spotify" role="button" data-slide="next">
-            <i class="fas fa-angle-right fa-3x"></i>
-            <span class="sr-only">Próximo</span>
-          </a>
+          <button
+            class="carousel-control-prev"
+            type="button" data-bs-target="#carousel-spotify" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button" data-bs-target="#carousel-spotify" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
       </div>
     </section>
@@ -47,18 +49,18 @@
           <div class="col-md-6">
             <div class="row albuns">
               <div class="col-md-6">
-                <img src="<%= require('../assets/imagens/img1.jpg') %>" class="img-fluid" alt="Capa de álbum 1">
+                <img src="/assets/imagens/img1.jpg" class="img-fluid" alt="Capa de álbum 1">
               </div>
               <div class="col-md-6">
-                <img src="<%= require('../assets/imagens/img2.jpg') %>" class="img-fluid" alt="Capa de álbum 2">
+                <img src="/assets/imagens/img2.jpg" class="img-fluid" alt="Capa de álbum 2">
               </div>
             </div>
             <div class="row albuns">
               <div class="col-md-6">
-                <img src="<%= require('../assets/imagens/img3.jpg') %>" class="img-fluid" alt="Capa de álbum 3">
+                <img src="/assets/imagens/img3.jpg" class="img-fluid" alt="Capa de álbum 3">
               </div>
               <div class="col-md-6">
-                <img src="<%= require('../assets/imagens/img4.jpg') %>" class="img-fluid" alt="Capa de álbum 4">
+                <img src="/assets/imagens/img4.jpg" class="img-fluid" alt="Capa de álbum 4">
               </div>
             </div>
           </div>
@@ -74,32 +76,7 @@
         </div>
       </div>
     </section>
-    <section id="recursos" class="caixa section-resources">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Fácil</h2>
-            <h3>Buscar</h3>
-            <p>Já sabe o que quer escutar?...</p>
-            <h3>Navegar</h3>
-            <p>Veja os novos lançamentos...</p>
-            <h3>Descobrir</h3>
-            <p>Curta músicas novas toda segunda-feira...</p>
-          </div>
-          <div class="col-md-8">
-            <div class="row rotacionar resources-images">
-              <div class="col-md-6">
-                <img src="<%= require('../assets/imagens/iphone1.png') %>" class="img-fluid" alt="Capa do iphone 1">
-              </div>
-              <div class="col-md-6">
-                <img src="<%= require('../assets/imagens/iphone2.png') %>" class="img-fluid" alt="Capa do iphone 2">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
-  <%= require('../partials/footer.html') %>
+  <div id="footer-placeholder"></div>
 </body>
 </html>
