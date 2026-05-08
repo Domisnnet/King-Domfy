@@ -2,7 +2,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/vendor/fontawesome/css/all.min.css';
 import '@/css/estilos-globais.css';
-import '@/components/components';
 
 import hino1 from '@/assets/media/hino1.mp3';
 import hino2 from '@/assets/media/hino2.mp3';
