@@ -1,5 +1,4 @@
 const path = require('path');
-const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
@@ -28,21 +27,18 @@ const pages = [
   'termos.html',
 ];
 
-const header = fs.readFileSync( path.resolve(__dirname, 'src/partials/header.html'), 'utf8' );
-const footer = fs.readFileSync( path.resolve(__dirname, 'src/partials/footer.html'), 'utf8' );
-const createPage = (page, output) =>
+const createPage = (template, output) =>
   new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, page),
+    template: path.resolve(__dirname, template),
     filename: output,
     inject: 'body',
     scriptLoading: 'defer',
     minify: !isDev,
-    templateParameters: { header, footer, },
   });
 
 module.exports = {
   mode: isDev ? 'development' : 'production',
-  entry: path.resolve(__dirname, 'src/js/app.js'),
+  entry: './src/js/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/main.[contenthash].js',
@@ -66,42 +62,33 @@ module.exports = {
         test: /\.html$/i,
         loader: 'html-loader',
         options: {
-          esModule: false,
-          sources: {
-            list: ['...'],
-          },
+          sources: false,
           minimize: false,
         },
       },
       {
+        test: /\.ejs$/i,
+        loader: 'ejs-loader',
+        options: { esModule: false, },
+      },
+      {
         test: /\.css$/i,
-        use: [
-          isDev
-            ? 'style-loader'
-            : MiniCssExtractPlugin.loader,
-          'css-loader',
-        ],
+        use: [ isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', ],
       },
       {
-        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        test: /\.(png|jpg|jpeg|gif|svg|webp)$/i,
         type: 'asset/resource',
-        generator: {
-          filename: 'assets/imagens/[name].[contenthash][ext]',
-        },
+        generator: { filename: 'assets/imagens/[name].[contenthash][ext]', },
       },
       {
-        test: /\.(woff2?|eot|ttf|otf)$/i,
+        test: /\.(woff2?|ttf|eot|otf)$/i,
         type: 'asset/resource',
-        generator: {
-          filename: 'assets/fonts/[name][ext]',
-        },
+        generator: { filename: 'assets/fonts/[name][ext]', },
       },
       {
         test: /\.(mp3|wav)$/i,
         type: 'asset/resource',
-        generator: {
-          filename: 'assets/media/[name].[contenthash][ext]',
-        },
+        generator: { filename: 'assets/media/[name].[contenthash][ext]', },
       },
     ],
   },
@@ -110,10 +97,7 @@ module.exports = {
     createPage('src/pages/home.html', 'index.html'),
     ...pages.map((page) => createPage( `src/pages/${page}`, `pages/${page}` )),
     new MiniCssExtractPlugin({ filename: 'css/[name].[contenthash].css', }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-    }),
+    new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', }),
   ],
 
   resolve: {
