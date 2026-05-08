@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
@@ -27,6 +28,8 @@ const pages = [
   'termos.html',
 ];
 
+const header = fs.readFileSync( path.resolve(__dirname, 'src/partials/header.html'), 'utf8' );
+const footer = fs.readFileSync( path.resolve(__dirname, 'src/partials/footer.html'), 'utf8' );
 const createPage = (template, output) =>
   new HtmlWebpackPlugin({
     template: path.resolve(__dirname, template),
@@ -45,7 +48,6 @@ module.exports = {
     publicPath: '/',
     clean: true,
   },
-
   devtool: isDev ? 'eval-source-map' : false,
   devServer: {
     static: { directory: path.resolve(__dirname, 'dist'), },
@@ -67,10 +69,10 @@ module.exports = {
             options: {
               esModule: false,
               minimize: false,
-              preprocessor: (content, loaderContext) => {
-                const fs = require('fs');
-                const header = fs.readFileSync( path.resolve(__dirname, 'src/partials/header.html'), 'utf8' );
-                const footer = fs.readFileSync( path.resolve(__dirname, 'src/partials/footer.html'), 'utf8' );
+              sources: {
+                list: [ '...', ],
+              },
+              preprocessor: (content) => {
                 return content
                   .replace(/<%=\s*require\(['"]\.\.\/partials\/header\.html['"]\)\s*%>/g, header )
                   .replace(/<%=\s*require\(['"]\.\.\/partials\/footer\.html['"]\)\s*%>/g, footer );
@@ -82,7 +84,7 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 
+          isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader',
         ],
       },
       {
@@ -104,8 +106,8 @@ module.exports = {
   },
 
   plugins: [
-    createPage('src/pages/home.html', 'index.html'),
-    ...pages.map((page) => createPage(`src/pages/${page}`, `pages/${page}`)),
+    createPage( 'src/pages/home.html', 'index.html' ),
+    ...pages.map((page) => createPage( `src/pages/${page}`, `pages/${page}` )),
     new MiniCssExtractPlugin({ filename: 'css/[name].[contenthash].css', }),
     new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', }),
   ],
@@ -113,7 +115,7 @@ module.exports = {
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
-      jquery: path.resolve(__dirname, 'src/vendor/jquery/jquery.min.js'),
+      jquery: path.resolve(__dirname, 'src/vendor/jquery/jquery.min.js' ),
     },
   },
 };
