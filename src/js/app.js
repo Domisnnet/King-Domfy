@@ -3,24 +3,46 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/vendor/fontawesome/css/all.min.css';
 import '@/css/estilos-globais.css';
 
-let indiceAtual = 1; 
+import hino1 from '@/assets/media/hino1.mp3';
+import hino2 from '@/assets/media/hino2.mp3';
+import hino3 from '@/assets/media/hino3.mp3';
+import hino4 from '@/assets/media/hino4.mp3';
+import hino5 from '@/assets/media/hino5.mp3';
+import hino6 from '@/assets/media/hino6.mp3';
+import hino7 from '@/assets/media/hino7.mp3';
+import hino8 from '@/assets/media/hino8.mp3';
+import hino9 from '@/assets/media/hino9.mp3';
+import hino10 from '@/assets/media/hino10.mp3';
+import capaAlbum from '@/assets/imagens/melodias-da-alma.jpeg';
+import img1 from '@/assets/imagens/img1.jpeg';
+import img2 from '@/assets/imagens/img2.jpeg';
+import img3 from '@/assets/imagens/img3.jpeg';
+import img4 from '@/assets/imagens/img4.jpeg';
+import img5 from '@/assets/imagens/img5.jpeg';
+import img6 from '@/assets/imagens/img6.jpeg';
+import img7 from '@/assets/imagens/img7.jpeg';
+import img8 from '@/assets/imagens/img8.jpeg';
+import img9 from '@/assets/imagens/img9.jpeg';
+import img10 from '@/assets/imagens/img10.jpeg';
+
+let indiceAtual = 1;
 const audio = new Audio();
 let isPlaying = false;
 let isShuffle = false;
 let isRepeat = false;
 
 const playlist = [
-  { titulo: "Capa do Álbum", caminho: "/src/assets/media/hino1.mp3", capa: "/src/assets/imagens/melodias-da-alma.jpeg"},
-  { titulo: "Hino 1 - Hino da Jornada", caminho: "/src/assets/media/hino1.mp3", capa: "/src/assets/imagens/img1.jpeg" },
-  { titulo: "Hino 2 - A estrada é longa, mas eu sigo", caminho: "/src/assets/media/hino2.mp3", capa: "/src/assets/imagens/img2.jpeg" },
-  { titulo: "Hino 3 - Em Tua Vida, Deus", caminho: "/src/assets/media/hino3.mp3", capa: "/src/assets/imagens/img3.jpeg" },
-  { titulo: "Hino 4 - Siga adiante, não desanima", caminho: "/src/assets/media/hino4.mp3", capa: "/src/assets/imagens/img4.jpeg" },
-  { titulo: "Hino 5 - Eu só queria, Senhor!", caminho: "/src/assets/media/hino5.mp3", capa: "/src/assets/imagens/img5.jpeg" },
-  { titulo: "Hino 6 - Às vezes eu me sinto assim", caminho: "/src/assets/media/hino6.mp3", capa: "/src/assets/imagens/img6.jpeg" },
-  { titulo: "Hino 7 - O Sangue de Cristo Conhecido", caminho: "/src/assets/media/hino7.mp3", capa: "/assets/imagens/img7.jpeg" },
-  { titulo: "Hino 8 - O Amor aqui, esfriando está", caminho: "/src/assets/media/hino8.mp3", capa: "/src/assets/imagens/img8.jpeg" },
-  { titulo: "Hino 9 - Hoje é tão Difícil", caminho: "/src/assets/media/hino9.mp3", capa: "/src/assets/imagens/img9.jpeg" },
-  { titulo: "Hino 10 - Pelo Sangue purificado", caminho: "/src/assets/media/hino10.mp3", capa: "/src/assets/imagens/img10.jpeg" }
+  { titulo: 'Capa do Álbum', caminho: hino1, capa: capaAlbum },
+  { titulo: 'Hino 1 - Hino da Jornada', caminho: hino1, capa: img1 },
+  { titulo: 'Hino 2 - A estrada é longa, mas eu sigo', caminho: hino2, capa: img2 },
+  { titulo: 'Hino 3 - Em Tua Vida, Deus', caminho: hino3, capa: img3 },
+  { titulo: 'Hino 4 - Siga adiante, não desanima', caminho: hino4, capa: img4 },
+  { titulo: 'Hino 5 - Eu só queria, Senhor!', caminho: hino5, capa: img5 },
+  { titulo: 'Hino 6 - Às vezes eu me sinto assim', caminho: hino6, capa: img6 },
+  { titulo: 'Hino 7 - O Sangue de Cristo Conhecido', caminho: hino7, capa: img7 },
+  { titulo: 'Hino 8 - O Amor aqui, esfriando está', caminho: hino8, capa: img8 },
+  { titulo: 'Hino 9 - Hoje é tão Difícil', caminho: hino9, capa: img9 },
+  { titulo: 'Hino 10 - Pelo Sangue purificado', caminho: hino10, capa: img10 },
 ];
 
 const initPlayer = () => {
@@ -50,7 +72,7 @@ const initPlayer = () => {
     const musica = playlist[indice];
     audio.src = musica.caminho;
     displayTitulo.innerText = musica.titulo;
-    if (displayCapa) displayCapa.src = musica.capa;
+    if (displayCapa) { displayCapa.src = musica.capa; }
     audio.load();
   };
 
@@ -60,26 +82,22 @@ const initPlayer = () => {
     } else if (isShuffle) {
       let novoIndice;
       do {
-        novoIndice = Math.floor(Math.random() * (playlist.length - 1)) + 1; 
+        novoIndice = Math.floor(Math.random() * (playlist.length - 1)) + 1;
       } while (novoIndice === indiceAtual && playlist.length > 2);
       indiceAtual = novoIndice;
     } else {
       indiceAtual++;
-      if (indiceAtual >= playlist.length) {
-        indiceAtual = 1; 
-      }
+      if (indiceAtual >= playlist.length) { indiceAtual = 1; }
     }
     carregarMusica(indiceAtual);
-    if (isPlaying) audio.play();
+    if (isPlaying) { audio.play(); }
   };
 
   const musicaAnterior = () => {
     indiceAtual--;
-    if (indiceAtual < 1) {
-      indiceAtual = playlist.length - 1; 
-    }
+    if (indiceAtual < 1) { indiceAtual = playlist.length - 1; }
     carregarMusica(indiceAtual);
-    if (isPlaying) audio.play();
+    if (isPlaying) { audio.play(); }
   };
 
   btnPlayPause.addEventListener('click', () => {
@@ -108,24 +126,20 @@ const initPlayer = () => {
   btnPrev.addEventListener('click', musicaAnterior);
   audio.addEventListener('timeupdate', () => {
     const percent = (audio.currentTime / audio.duration) * 100;
-    if (progressFill) progressFill.style.width = `${percent}%`;
-    if (timeCurrent) timeCurrent.innerText = formatarTempo(audio.currentTime);
-    if (timeTotal && !isNaN(audio.duration)) {
-      timeTotal.innerText = formatarTempo(audio.duration);
-    }
+    if (progressFill) { progressFill.style.width = `${percent}%`; }
+    if (timeCurrent) { timeCurrent.innerText = formatarTempo(audio.currentTime); }
+    if (timeTotal && !isNaN(audio.duration)) { timeTotal.innerText = formatarTempo(audio.duration); }
   });
 
   if (progressContainer) {
     progressContainer.addEventListener('click', (e) => {
       const width = progressContainer.clientWidth;
       const clickX = e.offsetX;
-      if (audio.duration) {
-        audio.currentTime = (clickX / width) * audio.duration;
-      }
+      if (audio.duration) { audio.currentTime = (clickX / width) * audio.duration; }
     });
   }
-  audio.addEventListener('ended', proximaMusica);
 
+  audio.addEventListener('ended', proximaMusica);
   if (volumeSlider) {
     volumeSlider.addEventListener('input', () => {
       audio.volume = volumeSlider.value;
@@ -151,14 +165,9 @@ const initPlayer = () => {
       }
     });
   }
+
   carregarMusica(indiceAtual);
-  if (volumeSlider) audio.volume = volumeSlider.value;
+  if (volumeSlider) { audio.volume = volumeSlider.value; }
 };
 
-document.addEventListener('templatesReady', initPlayer);
-document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    if (!document.getElementById('btnPlayPause')) return;
-    initPlayer();
-  }, 500);
-});
+document.addEventListener('DOMContentLoaded', initPlayer);
