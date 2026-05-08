@@ -1,8 +1,7 @@
 const path = require('path');
-const webpack = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 const isDev = process.env.NODE_ENV !== 'production';
 
 const pages = [
@@ -28,21 +27,26 @@ module.exports = {
   output: {
     filename: 'js/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/', 
+    publicPath: '/',
     clean: true,
   },
-  devtool: isDev ? 'eval-source-map' : false,
 
   module: {
     rules: [
       {
         test: /\.html$/i,
-        loader: 'html-loader',
-        options: {
-          minimize: false,
-          esModule: false,
-          sources: false, 
-        },
+        exclude: /src\/pages/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              esModule: false, 
+              sources: {
+                list: ['...'],
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.css$/i,
@@ -92,20 +96,6 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
     }),
-
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'public'),
-          to: '', 
-        },
-        {
-          from: path.resolve(__dirname, 'src/vendor'),
-          to: 'vendor',
-          noErrorOnMissing: true,
-        },
-      ],
-    }),
   ],
 
   resolve: {
@@ -116,18 +106,12 @@ module.exports = {
   },
 
   devServer: {
-    port: 3000,
+    port: 3001,
     open: true,
     hot: true,
-
     static: {
-      directory: path.resolve(__dirname, 'public'), 
-      publicPath: '/',
+      directory: path.resolve(__dirname, 'dist'),
     },
-
-    devMiddleware: {
-      publicPath: '/',
-    },
-    watchFiles: ['src/**/*', 'public/**/*'],
+    watchFiles: ['src/**/*'],
   },
 };

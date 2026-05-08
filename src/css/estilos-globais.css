@@ -86,6 +86,10 @@ nav.navbar {
   margin: 20px;
 }
 
+.navbar-brand img {
+  width: 110px;
+}
+
 .divisor {
   width: 1px;
   height: 15px;
