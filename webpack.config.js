@@ -60,20 +60,30 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
-        loader: 'html-loader',
-        options: {
-          sources: false,
-          minimize: false,
-        },
-      },
-      {
-        test: /\.ejs$/i,
-        loader: 'ejs-loader',
-        options: { esModule: false, },
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              esModule: false,
+              minimize: false,
+              preprocessor: (content, loaderContext) => {
+                const fs = require('fs');
+                const header = fs.readFileSync( path.resolve(__dirname, 'src/partials/header.html'), 'utf8' );
+                const footer = fs.readFileSync( path.resolve(__dirname, 'src/partials/footer.html'), 'utf8' );
+                return content
+                  .replace(/<%=\s*require\(['"]\.\.\/partials\/header\.html['"]\)\s*%>/g, header )
+                  .replace(/<%=\s*require\(['"]\.\.\/partials\/footer\.html['"]\)\s*%>/g, footer );
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.css$/i,
-        use: [ isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', ],
+        use: [
+          isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 
+        ],
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|webp)$/i,
@@ -95,7 +105,7 @@ module.exports = {
 
   plugins: [
     createPage('src/pages/home.html', 'index.html'),
-    ...pages.map((page) => createPage( `src/pages/${page}`, `pages/${page}` )),
+    ...pages.map((page) => createPage(`src/pages/${page}`, `pages/${page}`)),
     new MiniCssExtractPlugin({ filename: 'css/[name].[contenthash].css', }),
     new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', }),
   ],
@@ -103,7 +113,7 @@ module.exports = {
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
-      jquery: path.resolve(__dirname, 'src/vendor/jquery/jquery.min.js' ),
+      jquery: path.resolve(__dirname, 'src/vendor/jquery/jquery.min.js'),
     },
   },
 };
