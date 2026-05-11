@@ -53,8 +53,8 @@ module.exports = {
           loader: 'html-loader',
           options: {
             preprocessor: (content) => content
-              .replace(/<id>header-placeholder<\/id>/g, header)
-              .replace(/<id>footer-placeholder<\/id>/g, footer)
+              .replace(/<div id="header-placeholder"><\/div>/g, header)
+              .replace(/<div id="footer-placeholder"><\/div>/g, footer)
           }
         }]
       },
