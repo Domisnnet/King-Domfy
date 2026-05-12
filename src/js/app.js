@@ -1,29 +1,30 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@/vendor/fontawesome/css/all.min.css';
-import '@/css/estilos-globais.css';
+import 'vendor/fontawesome/css/all.min.css';
+import 'css/estilos-globais.css';
 
-import hino1 from '@/assets/media/hino1.mp3';
-import hino2 from '@/assets/media/hino2.mp3';
-import hino3 from '@/assets/media/hino3.mp3';
-import hino4 from '@/assets/media/hino4.mp3';
-import hino5 from '@/assets/media/hino5.mp3';
-import hino6 from '@/assets/media/hino6.mp3';
-import hino7 from '@/assets/media/hino7.mp3';
-import hino8 from '@/assets/media/hino8.mp3';
-import hino9 from '@/assets/media/hino9.mp3';
-import hino10 from '@/assets/media/hino10.mp3';
-import capaAlbum from '@/assets/imagens/melodias-da-alma.jpeg';
-import img1 from '@/assets/imagens/img1.jpeg';
-import img2 from '@/assets/imagens/img2.jpeg';
-import img3 from '@/assets/imagens/img3.jpeg';
-import img4 from '@/assets/imagens/img4.jpeg';
-import img5 from '@/assets/imagens/img5.jpeg';
-import img6 from '@/assets/imagens/img6.jpeg';
-import img7 from '@/assets/imagens/img7.jpeg';
-import img8 from '@/assets/imagens/img8.jpeg';
-import img9 from '@/assets/imagens/img9.jpeg';
-import img10 from '@/assets/imagens/img10.jpeg';
+import hino1 from 'assets/media/hino1.mp3';
+import hino2 from 'assets/media/hino2.mp3';
+import hino3 from 'assets/media/hino3.mp3';
+import hino4 from 'assets/media/hino4.mp3';
+import hino5 from 'assets/media/hino5.mp3';
+import hino6 from 'assets/media/hino6.mp3';
+import hino7 from 'assets/media/hino7.mp3';
+import hino8 from 'assets/media/hino8.mp3';
+import hino9 from 'assets/media/hino9.mp3';
+import hino10 from 'assets/media/hino10.mp3';
+
+import capaAlbum from 'assets/imagens/melodias-da-alma.jpeg';
+import img1 from 'assets/imagens/img1.jpeg';
+import img2 from 'assets/imagens/img2.jpeg';
+import img3 from 'assets/imagens/img3.jpeg';
+import img4 from 'assets/imagens/img4.jpeg';
+import img5 from 'assets/imagens/img5.jpeg';
+import img6 from 'assets/imagens/img6.jpeg';
+import img7 from 'assets/imagens/img7.jpeg';
+import img8 from 'assets/imagens/img8.jpeg';
+import img9 from 'assets/imagens/img9.jpeg';
+import img10 from 'assets/imagens/img10.jpeg';
 
 let indiceAtual = 1;
 const audio = new Audio();
@@ -48,6 +49,7 @@ const playlist = [
 const initPlayer = () => {
   const btnPlayPause = document.getElementById('btnPlayPause');
   if (!btnPlayPause) return;
+
   const btnNext = document.getElementById('btnNext');
   const btnPrev = document.getElementById('btnPrev');
   const btnShuffle = document.getElementById('btnShuffle');
@@ -62,6 +64,7 @@ const initPlayer = () => {
   const timeTotal = document.getElementById('totalDuration');
   const volumeSlider = document.getElementById('volumeSlider');
   const volumeIcon = document.getElementById('volumeIcon');
+
   const formatarTempo = (segundos) => {
     const min = Math.floor(segundos / 60);
     const seg = Math.floor(segundos % 60);
@@ -70,10 +73,18 @@ const initPlayer = () => {
 
   const carregarMusica = (indice) => {
     const musica = playlist[indice];
+    if (!musica) return;
     audio.src = musica.caminho;
-    displayTitulo.innerText = musica.titulo;
-    if (displayCapa) { displayCapa.src = musica.capa; }
+    if (displayTitulo) displayTitulo.innerText = musica.titulo;
+    if (displayCapa) displayCapa.src = musica.capa;
     audio.load();
+  };
+
+  const atualizarIconeVolume = () => {
+    if (!volumeIcon) return;
+    if (audio.muted || audio.volume === 0) volumeIcon.className = 'fas fa-volume-mute';
+    else if (audio.volume < 0.5) volumeIcon.className = 'fas fa-volume-down';
+    else volumeIcon.className = 'fas fa-volume-up';
   };
 
   const proximaMusica = () => {
@@ -87,86 +98,87 @@ const initPlayer = () => {
       indiceAtual = novoIndice;
     } else {
       indiceAtual++;
-      if (indiceAtual >= playlist.length) { indiceAtual = 1; }
+      if (indiceAtual >= playlist.length) indiceAtual = 1;
     }
     carregarMusica(indiceAtual);
-    if (isPlaying) { audio.play(); }
+    if (isPlaying) audio.play();
   };
 
   const musicaAnterior = () => {
     indiceAtual--;
-    if (indiceAtual < 1) { indiceAtual = playlist.length - 1; }
+    if (indiceAtual < 1) indiceAtual = playlist.length - 1;
     carregarMusica(indiceAtual);
-    if (isPlaying) { audio.play(); }
+    if (isPlaying) audio.play();
   };
 
   btnPlayPause.addEventListener('click', () => {
     if (isPlaying) {
       audio.pause();
-      svgPlay.style.display = 'block';
-      svgPause.style.display = 'none';
+      if (svgPlay) svgPlay.style.display = 'block';
+      if (svgPause) svgPause.style.display = 'none';
     } else {
       audio.play();
-      svgPlay.style.display = 'none';
-      svgPause.style.display = 'block';
+      if (svgPlay) svgPlay.style.display = 'none';
+      if (svgPause) svgPause.style.display = 'block';
     }
     isPlaying = !isPlaying;
   });
 
-  btnShuffle.addEventListener('click', () => {
-    isShuffle = !isShuffle;
-    btnShuffle.classList.toggle('active-control', isShuffle);
-  });
+  if (btnShuffle) {
+    btnShuffle.addEventListener('click', () => {
+      isShuffle = !isShuffle;
+      btnShuffle.classList.toggle('active-control', isShuffle);
+    });
+  }
 
-  btnRepeat.addEventListener('click', () => {
-    isRepeat = !isRepeat;
-    btnRepeat.classList.toggle('active-control', isRepeat);
-  });
-  btnNext.addEventListener('click', proximaMusica);
-  btnPrev.addEventListener('click', musicaAnterior);
+  if (btnRepeat) {
+    btnRepeat.addEventListener('click', () => {
+      isRepeat = !isRepeat;
+      btnRepeat.classList.toggle('active-control', isRepeat);
+    });
+  }
+
+  if (btnNext) btnNext.addEventListener('click', proximaMusica);
+  if (btnPrev) btnPrev.addEventListener('click', musicaAnterior);
+
   audio.addEventListener('timeupdate', () => {
+    if (!Number.isFinite(audio.duration) || audio.duration <= 0) return;
     const percent = (audio.currentTime / audio.duration) * 100;
-    if (progressFill) { progressFill.style.width = `${percent}%`; }
-    if (timeCurrent) { timeCurrent.innerText = formatarTempo(audio.currentTime); }
-    if (timeTotal && !isNaN(audio.duration)) { timeTotal.innerText = formatarTempo(audio.duration); }
+    if (progressFill) progressFill.style.width = `${percent}%`;
+    if (timeCurrent) timeCurrent.innerText = formatarTempo(audio.currentTime);
+    if (timeTotal) timeTotal.innerText = formatarTempo(audio.duration);
   });
 
   if (progressContainer) {
     progressContainer.addEventListener('click', (e) => {
+      if (!audio.duration) return;
       const width = progressContainer.clientWidth;
       const clickX = e.offsetX;
-      if (audio.duration) { audio.currentTime = (clickX / width) * audio.duration; }
+      audio.currentTime = (clickX / width) * audio.duration;
     });
   }
 
   audio.addEventListener('ended', proximaMusica);
+
   if (volumeSlider) {
+    audio.volume = Number(volumeSlider.value || 1);
+    atualizarIconeVolume();
+
     volumeSlider.addEventListener('input', () => {
-      audio.volume = volumeSlider.value;
-      if (audio.volume === 0) {
-        volumeIcon.className = 'fas fa-volume-mute';
-      } else if (audio.volume < 0.5) {
-        volumeIcon.className = 'fas fa-volume-down';
-      } else {
-        volumeIcon.className = 'fas fa-volume-up';
-      }
+      audio.volume = Number(volumeSlider.value);
+      audio.muted = false;
+      atualizarIconeVolume();
     });
   }
 
   if (volumeIcon) {
     volumeIcon.addEventListener('click', () => {
       audio.muted = !audio.muted;
-      if (audio.muted) {
-        volumeIcon.className = 'fas fa-volume-mute';
-        volumeSlider.value = 0;
-      } else {
-        volumeIcon.className = 'fas fa-volume-up';
-        volumeSlider.value = audio.volume;
-      }
+      if (volumeSlider && audio.muted) volumeSlider.value = 0;
+      if (volumeSlider && !audio.muted) volumeSlider.value = audio.volume;
+      atualizarIconeVolume();
     });
   }
   carregarMusica(indiceAtual);
-  if (volumeSlider) { audio.volume = volumeSlider.value; }
 };
-
 document.addEventListener('DOMContentLoaded', initPlayer);
