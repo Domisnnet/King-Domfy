@@ -1,33 +1,75 @@
 {
   "name": "king-domfy-web-essentials",
-  "version": "1.0.0",
-  "description": "Projeto multipage com Webpack - KingDomfy",
+  "version": "2.0.0",
+  "description": "Projeto multipage Web Essentials - KingDomfy",
   "private": true,
+  "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --mode development --open",
-    "build": "webpack --mode production",
-    "watch": "webpack --watch",
-    "clean": "rm -rf dist"
+    "test": "echo \"No tests configured\" && exit 0",
+
+    "clean": "rimraf dist",
+
+    "create-dirs": "mkdir -p dist/src/css && mkdir -p dist/src/js && mkdir -p dist/src/imagens && mkdir -p dist/vendor",
+
+    "copy:html": "cpx \"*.html\" dist && cpx \"pages/**/*.html\" dist/pages",
+
+    "copy:assets": "cpx \"src/imagens/**/*\" \"dist/src/imagens\" && cpx \"vendor/**/*\" \"dist/vendor\"",
+
+    "minify:html": "html-minifier --input-dir . --output-dir dist --file-ext html --collapse-whitespace --remove-comments index.html pages/*.html",
+
+    "minify:css": "cleancss -o dist/src/css/style.min.css src/css/style.css",
+
+    "minify:js": "uglifyjs src/js/*.js -o dist/src/js/app.min.js -c -m",
+
+    "clean:maps": "rimraf dist/**/*.map",
+
+    "build": "npm-run-all clean create-dirs copy:assets minify:html minify:css minify:js clean:maps",
+
+    "watch:css": "onchange \"src/css/**/*.css\" -- npm run minify:css",
+
+    "watch:js": "onchange \"src/js/**/*.js\" -- npm run minify:js",
+
+    "watch": "npm-run-all --parallel watch:css watch:js",
+
+    "serve": "live-server dist",
+
+    "dev": "npm-run-all build --parallel watch serve"
   },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Domisnnet/KingDomfy-Web-Essentials.git"
+  },
+
   "keywords": [
-    "webpack",
+    "html",
+    "css",
+    "javascript",
+    "bootstrap",
     "multipage",
-    "frontend",
-    "bootstrap"
+    "web-essentials"
   ],
+
   "author": "Dominique Gonçalves",
   "license": "MIT",
-  "devDependencies": {
-    "copy-webpack-plugin": "^12.0.2",
-    "css-loader": "^7.1.2",
-    "html-loader": "^5.1.0",
-    "html-webpack-plugin": "^5.6.0",
-    "mini-css-extract-plugin": "^2.9.0",
-    "style-loader": "^4.0.0",
-    "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+
+  "bugs": {
+    "url": "https://github.com/Domisnnet/KingDomfy-Web-Essentials/issues"
   },
+
+  "homepage": "https://github.com/Domisnnet/KingDomfy-Web-Essentials#readme",
+
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "cpx": "^1.5.0",
+    "html-minifier": "^4.0.0",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "rimraf": "^5.0.5",
+    "uglify-js": "^3.19.3"
+  },
+
   "dependencies": {
     "bootstrap": "^5.3.8",
     "jquery": "^3.7.1"

@@ -1,8 +1,3 @@
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'vendor/fontawesome/css/all.min.css';
-import 'css/estilos-globais.css';
-
 let indiceAtual = 1;
 const audio = new Audio();
 let isPlaying = false;
