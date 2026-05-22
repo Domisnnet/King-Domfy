@@ -460,47 +460,6 @@ img {
 }
 
 /* =========================================================
-  RESPONSIVE
-========================================================= */
-@media (max-width: 768px) {
-
-  .caixa-player {
-    padding: 120px 16px 60px;
-  }
-
-  .player-container {
-    padding: 24px;
-  }
-
-  .album-art {
-    max-width: 260px;
-  }
-
-  .song-details h4 {
-    font-size: 1.5rem;
-  }
-
-  .player-controls {
-    gap: 14px;
-  }
-
-  .btn-main-player {
-    width: 64px;
-    height: 64px;
-  }
-
-  .btn-main-player svg {
-    width: 64px;
-    height: 64px;
-  }
-
-  #volumeSlider {
-    width: 120px;
-  }
-
-}
-
-/* =========================================================
   FOOTER
 ========================================================= */
 footer {
@@ -647,6 +606,9 @@ footer ul:has(.social-icons) {
 /* =========================================================
   RESPONSIVE
 ========================================================= */
+/* =========================================================
+  FOOTER RESPONSIVE
+========================================================= */
 @media (max-width: 991.98px) {
   .navbar-collapse { margin-top: 20px; }
   .navbar-nav { text-align: center; }
@@ -658,11 +620,33 @@ footer ul:has(.social-icons) {
   }
   .divisor { display: none; }
   .capa h1 { font-size: 3rem; }
+  footer { text-align: center; }
+  footer .row { justify-content: center; row-gap: 2.5rem; }
+  footer .col-lg-auto,
+  footer .col-md-6,
+  footer .col-12 { width: 100%; max-width: 320px; margin: 0 auto; }
+  footer .navbar-nav { align-items: center; }
+  footer ul { justify-content: center; }
+  footer .footer-link { text-align: center; }
+  footer h4 { margin-bottom: 1rem; }
+  footer .espaco,
+  footer .social-icons { margin: 0; }
+  footer ul:has(.espaco),
+  footer ul:has(.social-icons) { justify-content: center; }
+  #dev { justify-content: center; }
+  .footer-bottom { text-align: center; gap: 1rem; }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .capa h1 { font-size: 2.5rem; }
   .btn-custom { width: 100%; margin-bottom: 15px; }
   .rotacionar { transform: none; padding-left: 0; }
+  .player-container { padding: 24px; }
+  .album-art { max-width: 260px; }
+  .song-details h4 { font-size: 1.5rem; }
+  .player-controls { gap: 14px; }
+  .btn-main-player { width: 64px; height: 64px; }
+  .btn-main-player svg { width: 64px; height: 64px; }
+  #volumeSlider { width: 120px; }
   .footer-bottom { text-align: center; }
 }
