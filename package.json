@@ -11,7 +11,7 @@
     "copy:html": "cpx \"*.html\" dist && cpx \"pages/**/*.html\" dist/pages",
     "copy:assets": "cpx \"src/imagens/**/*\" \"dist/src/imagens\" && cpx \"vendor/**/*\" \"dist/vendor\"",
     "minify:html": "html-minifier --input-dir . --output-dir dist --file-ext html --collapse-whitespace --remove-comments index.html pages/*.html",
-    "minify:css": "cleancss -o dist/src/css/style.min.css src/css/style.css",
+    "minify:css": "cleancss -o dist/src/css/style.min.css src/css/estilos-globais.css",
     "minify:js": "uglifyjs src/js/*.js -o dist/src/js/app.min.js -c -m",
     "clean:maps": "rimraf dist/**/*.map",
     "build": "npm-run-all clean create-dirs copy:assets minify:html minify:css minify:js clean:maps",
