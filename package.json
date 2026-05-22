@@ -6,33 +6,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"No tests configured\" && exit 0",
-
     "clean": "rimraf dist",
-
     "create-dirs": "mkdir -p dist/src/css && mkdir -p dist/src/js && mkdir -p dist/src/imagens && mkdir -p dist/vendor",
-
     "copy:html": "cpx \"*.html\" dist && cpx \"pages/**/*.html\" dist/pages",
-
     "copy:assets": "cpx \"src/imagens/**/*\" \"dist/src/imagens\" && cpx \"vendor/**/*\" \"dist/vendor\"",
-
     "minify:html": "html-minifier --input-dir . --output-dir dist --file-ext html --collapse-whitespace --remove-comments index.html pages/*.html",
-
     "minify:css": "cleancss -o dist/src/css/style.min.css src/css/style.css",
-
     "minify:js": "uglifyjs src/js/*.js -o dist/src/js/app.min.js -c -m",
-
     "clean:maps": "rimraf dist/**/*.map",
-
     "build": "npm-run-all clean create-dirs copy:assets minify:html minify:css minify:js clean:maps",
-
     "watch:css": "onchange \"src/css/**/*.css\" -- npm run minify:css",
-
     "watch:js": "onchange \"src/js/**/*.js\" -- npm run minify:js",
-
     "watch": "npm-run-all --parallel watch:css watch:js",
-
     "serve": "live-server dist",
-
     "dev": "npm-run-all build --parallel watch serve"
   },
 
@@ -49,16 +35,13 @@
     "multipage",
     "web-essentials"
   ],
-
-  "author": "Dominique Gonçalves",
+  "author": "DomisDev",
   "license": "MIT",
-
   "bugs": {
     "url": "https://github.com/Domisnnet/KingDomfy-Web-Essentials/issues"
   },
 
   "homepage": "https://github.com/Domisnnet/KingDomfy-Web-Essentials#readme",
-
   "devDependencies": {
     "clean-css-cli": "^5.6.3",
     "cpx": "^1.5.0",
