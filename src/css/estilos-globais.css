@@ -465,9 +465,8 @@ img {
 footer {
   display: flex;
   position: relative;
-  padding: 60px 0 20px;
+  padding: 30px 0;
   background: var(--color-black-soft);
-  border-top: 1px solid var(--color-border);
 }
 
 footer h4 {
@@ -491,22 +490,47 @@ footer ul {
   list-style: none;
 }
 
+footer .row {
+  align-items: flex-start;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.footer-nav .nav-link {
+  color: var(--color-text);
+  font-weight: 700;
+  transition: color var(--transition-fast),transform var(--transition-fast);
+}
+
+.footer-nav .nav-link:hover {
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
 /* =========================================================
   TECH ICONS
 ========================================================= */
 footer ul:has(.espaco) {
   display: flex;
   align-items: center;
-  gap: 12px;
   flex-wrap: wrap;
+  gap: 12px;
 }
 
 .espaco {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 60px;
   height: 60px;
+  margin: 10px;
+  border: 2px solid var(--color-white);
   border-radius: 14px;
   background: var(--overlay-light);
   transition: background var(--transition-fast),transform var(--transition-fast);
@@ -518,8 +542,8 @@ footer ul:has(.espaco) {
 }
 
 .espaco img {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   filter: grayscale(.2);
   transition: filter var(--transition-fast);
 }
@@ -545,6 +569,7 @@ footer ul:has(.social-icons) {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  border: 2px solid var(--color-white);
   background: var(--color-surface);
   transition: background var(--transition-normal),transform var(--transition-normal),box-shadow var(--transition-normal);
 }
@@ -573,19 +598,19 @@ footer ul:has(.social-icons) {
 /* =========================================================
   DEV LINK
 ========================================================= */
-#dev {
+.footer-dev {
   display: flex;
   align-items: center;
 }
 
-#dev a {
+.footer-dev-link {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
   color: var(--color-text);
 }
 
-#dev:hover {
+.footer-dev-link:hover {
   color: var(--color-primary);
   text-decoration: none;
 }
@@ -594,18 +619,12 @@ footer ul:has(.social-icons) {
   content: " 🔗";
 }
 
-/* =========================================================
-  FOOTER BOTTOM
-========================================================= */
 .footer-bottom {
   margin-top: 1.5rem !important;
   padding-top: 1.5rem !important;
-  border-top: 1px solid var(--color-border) !important;
+  border-top: 2px solid var(--color-border) !important;
 }
 
-/* =========================================================
-  RESPONSIVE
-========================================================= */
 /* =========================================================
   FOOTER RESPONSIVE
 ========================================================= */
@@ -648,5 +667,6 @@ footer ul:has(.social-icons) {
   .btn-main-player { width: 64px; height: 64px; }
   .btn-main-player svg { width: 64px; height: 64px; }
   #volumeSlider { width: 120px; }
+  .espaco { flex-direction: row; }
   .footer-bottom { text-align: center; }
 }
