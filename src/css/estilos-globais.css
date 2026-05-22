@@ -290,6 +290,16 @@ img {
   font-weight: 700;
 }
 
+.link-interno {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.link-interno:hover {
+  color: var(--color-primary-hover);
+  text-decoration: none;
+}
+
 /* =========================================================
   IMAGES
 ========================================================= */
