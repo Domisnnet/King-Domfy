@@ -4,6 +4,15 @@
 :root {
   --rgb-black: 0, 0, 0;
   --rgb-white: 255, 255, 255;
+  --color-white-rgb: 255, 255, 255;
+  --color-black-rgb: 0, 0, 0;
+  --color-primary-rgb: 30, 215, 96;
+  --overlay-light-01: rgba(var(--color-white-rgb), .03);
+  --overlay-light-02: rgba(var(--color-white-rgb), .04);
+  --overlay-light-08: rgba(var(--color-white-rgb), .08);
+  --overlay-dark-14: rgba(var(--color-black-rgb), .14);
+  --overlay-primary-08: rgba(var(--color-primary-rgb), .08);
+  --overlay-primary-35: rgba(var(--color-primary-rgb), .35);
   --color-black: #000;
   --color-black-soft: #0a0a0a;
   --color-white: #fff;
@@ -257,7 +266,7 @@ img {
 }
 
 /* =========================================================
-  SECTIONS
+  SECTIONS / SERVICES /FAQS /RESOURCES
 ========================================================= */
 .caixa {
   padding: var(--section-spacing) 0;
@@ -298,6 +307,83 @@ img {
 .link-interno:hover {
   color: var(--color-primary-hover);
   text-decoration: none;
+}
+
+/* =========================================================
+  FAQ ACCORDION
+========================================================= */
+#faqAccordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#faqAccordion .accordion-item {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--overlay-light-01);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+#faqAccordion .accordion-item:hover {
+  border-color: var(--overlay-primary-35);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+#faqAccordion .accordion-header {
+  margin: 0;
+}
+
+#faqAccordion .accordion-button {
+  position: relative;
+  padding: 1.25rem 1.5rem;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+#faqAccordion .accordion-button:not(.collapsed) {
+  background: var(--overlay-primary-08);
+  color: var(--color-primary);
+}
+
+#faqAccordion .accordion-button:hover {
+  background: var(--overlay-light-02);
+}
+
+#faqAccordion .accordion-button::after {
+  filter: brightness(0) invert(1);
+  transform: scale(.9);
+  transition: transform var(--transition-fast);
+}
+
+#faqAccordion .accordion-button:not(.collapsed)::after {
+  transform: rotate(-180deg) scale(.9);
+}
+
+#faqAccordion .accordion-body {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  background: var(--overlay-dark-14);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+#faqAccordion .accordion-body a {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+#faqAccordion .accordion-body a:hover {
+  color: var(--color-primary-hover);
 }
 
 /* =========================================================
@@ -677,6 +763,8 @@ footer ul:has(.social-icons) {
   .btn-main-player { width: 64px; height: 64px; }
   .btn-main-player svg { width: 64px; height: 64px; }
   #volumeSlider { width: 120px; }
+  #faqAccordion .accordion-button { padding: 1rem 1.1rem; font-size: .95rem; }
+  #faqAccordion .accordion-body { padding: 1rem 1.1rem; font-size: .95rem; }
   .espaco { flex-direction: row; }
   .footer-bottom { text-align: center; }
 }
