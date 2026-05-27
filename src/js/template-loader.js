@@ -1,21 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const base = document.body.dataset.base || "./";
-  function loadTemplate(targetId, templatePath) {
-    fetch(base + templatePath)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Erro ao carregar ${templatePath}`);
-        }
-        return response.text();
-      })
-      .then((html) => {
-        html = html.replace(/{{BASE}}/g, base);
-        document.getElementById(targetId).innerHTML = html;
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+const loadTemplate = async (id, file) => {
+  const element = document.getElementById(id);
+  if (!element) return;
+  const base = document.body.dataset.base || './';
+  try {
+    const response = await fetch(`${base}src/templates/${file}`);
+    if (!response.ok) {
+      throw new Error(`Erro ao carregar ${file}`);
+    }
+
+    let html = await response.text();
+    html = html.replaceAll('{{BASE}}', base);
+    element.innerHTML = html;
+  } catch (error) {
+    console.error(error);
   }
-  loadTemplate("header-placeholder", "templates/header.html");
-  loadTemplate("footer-placeholder", "templates/footer.html");
+
+};
+
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadTemplate('header-placeholder', 'header.html');
+  await loadTemplate('footer-placeholder', 'footer.html');
 });
