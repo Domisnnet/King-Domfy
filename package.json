@@ -6,13 +6,13 @@
   "scripts": {
     "dev": "live-server --port=5500 --open=/index.html",
     "clean": "rimraf dist",
-    "create-dirs": "mkdir -p dist/src/css && mkdir -p dist/src/js && mkdir -p dist/src/imagens && mkdir -p dist/src/media && mkdir -p dist/vendor && mkdir -p dist/pages",
-    "copy:assets": "cpx \"src/imagens/**/*\" \"dist/src/imagens\" && cpx \"src/media/**/*\" \"dist/src/media\" && cpx \"vendor/**/*\" \"dist/vendor\"",
+    "create-dirs": "mkdir -p dist/src/css && mkdir -p dist/src/js && mkdir -p dist/src/assets/imagens && mkdir -p dist/src/assets/media && mkdir -p dist/vendor && mkdir -p dist/pages",
+    "copy:assets": "cpx \"src/assets/imagens/**/*\" \"dist/src/assets/imagens\" && cpx \"src/assets/media/**/*\" \"dist/src/assets/media\" && cpx \"vendor/**/*\" \"dist/vendor\"",
+    "copy:js": "cpx \"src/js/**/*\" \"dist/src/js\"",
     "minify:html": "html-minifier --input-dir . --output-dir dist --file-ext html --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype index.html pages/*.html",
     "minify:css": "cleancss -o dist/src/css/estilos-globais.min.css src/css/estilos-globais.css",
-    "minify:js": "uglifyjs src/js/app.js -o dist/src/js/app.min.js -c -m && uglifyjs src/js/player.js -o dist/src/js/player.min.js -c -m && uglifyjs src/js/template-loader.js -o dist/src/js/template-loader.min.js -c -m",
     "clean:maps": "rimraf dist/**/*.map",
-    "build": "npm-run-all clean create-dirs copy:assets minify:html minify:css minify:js clean:maps"
+    "build": "npm-run-all clean create-dirs copy:assets copy:js minify:html minify:css clean:maps"
   },
   "keywords": [
     "spotify-clone",
@@ -31,7 +31,6 @@
     "html-minifier": "^4.0.0",
     "live-server": "^1.2.2",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^5.0.5",
-    "uglify-js": "^3.17.4"
+    "rimraf": "^5.0.5"
   }
 }
