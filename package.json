@@ -12,7 +12,7 @@
     "copy:css": "cpx \"src/css/**/*.css\" dist/src/css",
     "copy:js": "cpx \"src/js/**/*.js\" dist/src/js",
     "copy:templates": "cpx \"src/templates/**/*\" dist/src/templates",
-    "copy:assets": "cpx \"src/assets/**/*\" \"dist/src/assets\" && cpx \"src/templates/**/*\" \"dist/src/templates\" && cpx \"vendor/bootstrap/**/*\" \"dist/vendor/bootstrap\" && cpx \"vendor/fontawesome/**/*\" \"dist/vendor/fontawesome\"",
+    "copy:assets": "cpx \"src/assets/**/*\" \"dist/src/assets\" && cpx \"src/templates/**/*\" \"dist/src/templates\"",
     "minify:html": "html-minifier --input-dir . --output-dir dist --file-ext html --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype index.html pages/*.html",
     "clean:maps": "rimraf dist/**/*.map",
     "build": "npm-run-all clean create-dirs copy:html copy:css copy:js copy:assets copy:templates minify:html clean:maps",
