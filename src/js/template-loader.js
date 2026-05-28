@@ -1,40 +1,39 @@
-const loadTemplate = async (id, file) => {
-  const element = document.getElementById(id);
-  if (!element) return;
-  const isRootPage =
-    window.location.pathname.endsWith('index.html') ||
-    window.location.pathname === '/' ||
-    window.location.pathname.endsWith('/');
-  const basePath = isRootPage ? './' : '../';
+const getBasePath = () => {
+  const bodyBase = document.body.dataset.base;
+  if (bodyBase) {
+    return bodyBase;
+  }
+  const isPagesRoute = window.location.pathname.includes('/pages/');
+  return isPagesRoute ? '../' : './';
+};
 
+const loadTemplate = async (templateName, targetId) => {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+  const base = getBasePath();
+  const templatePath = `${base}src/templates/${templateName}`;
   try {
-    const response = await fetch(
-      `${basePath}src/templates/${file}`
-    );
-
+    const response = await fetch(templatePath);
     if (!response.ok) {
-      throw new Error(`Erro ao carregar ${file}`);
+      throw new Error(`Erro ao carregar ${templateName}`);
     }
-
     let html = await response.text();
-    html = html.replaceAll('{{BASE}}', basePath);
-    element.innerHTML = html;
+    html = html.replace(/\{\{BASE\}\}/g, base);
+    target.innerHTML = html;
   } catch (error) {
     console.error(
-      `Erro ao carregar template: ${file}`,
+      `Erro ao carregar template: ${templateName}`,
       error
     );
   }
 };
-
 document.addEventListener('DOMContentLoaded', async () => {
   await loadTemplate(
-    'header-placeholder',
-    'header.html'
+    'header.html',
+    'header-placeholder'
   );
-
   await loadTemplate(
-    'footer-placeholder',
-    'footer.html'
+    'footer.html',
+    'footer-placeholder'
   );
 });
