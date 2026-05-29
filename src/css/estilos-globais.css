@@ -348,7 +348,9 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 30px;
   background: rgba(var(--color-black-rgb), .55);
   border-radius: 10px;
@@ -373,6 +375,106 @@ img {
 .link-interno:hover {
   color: var(--color-primary-hover);
   text-decoration: none;
+}
+
+/* =========================================================
+  PRIVACY PAGE
+========================================================= */
+
+.privacy-wrapper {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.privacy-container {
+  width: 100%;
+}
+
+.privacy-container #faqAccordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.privacy-container .accordion-item {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,.08);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.02)
+    );
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 40px rgba(0,0,0,.35);
+}
+
+.privacy-container .accordion-header {
+  margin: 0;
+}
+
+.privacy-container .accordion-button {
+  width: 100%;
+  padding: 1.6rem 2rem;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: left;
+  box-shadow: none;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.privacy-container .accordion-button:not(.collapsed) {
+  background: rgba(30,215,96,.08);
+  color: var(--color-primary);
+}
+
+.privacy-container .accordion-button:hover {
+  background: rgba(255,255,255,.03);
+}
+
+.privacy-container .accordion-body {
+  padding: 2rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.privacy-container .accordion-body p {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.privacy-container .btn-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+  margin: 0;
+}
+
+main.caixa {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+main.caixa h1 {
+  margin-bottom: 1.5rem;
+}
+
+main.caixa .lead {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 1.35rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
 }
 
 /* =========================================================
@@ -798,6 +900,11 @@ footer ul:has(.social-icons) {
   .navbar-nav .btn-custom { width: fit-content; margin-top: 10px; margin-left: auto; margin-right: auto; }
   .divisor { display: none; }
   .capa h1 { font-size: 3rem; }
+  .privacy-wrapper,
+  .privacy-container,
+  #faqAccordion { width: 100%; }
+  .privacy-container .accordion-button { padding: 1.4rem 1.5rem; font-size: 1rem; }
+  .privacy-container .accordion-body { padding: 1.5rem; }
   footer { text-align: center; }
   footer .row { justify-content: center; row-gap: 2.5rem; }
   footer .col-lg-auto,
@@ -821,7 +928,6 @@ footer ul:has(.social-icons) {
   .navbar-toggler { padding: 15px; }
   .capa h1 { font-size: 2.5rem; }
   .btn-custom { width: 100%; margin-bottom: 15px; }
-  .btn-roxo { display: none; }
   .rotacionar { transform: none; padding-left: 0; }
   .player-container { padding: 24px; }
   .album-art { max-width: 260px; }
@@ -830,6 +936,9 @@ footer ul:has(.social-icons) {
   .btn-main-player { width: 64px; height: 64px; }
   .btn-main-player svg { width: 64px; height: 64px; }
   #volumeSlider { width: 120px; }
+  main.caixa { padding-top: 90px; padding-bottom: 90px; }
+  main.caixa .lead { font-size: 1.05rem; }
+  .privacy-container .btn-custom { width: 100%; min-width: 100%; }
   #faqAccordion .accordion-button { padding: 1rem 1.1rem; font-size: .95rem; }
   #faqAccordion .accordion-body { padding: 1rem 1.1rem; font-size: .95rem; }
   .espaco { flex-direction: row; }
