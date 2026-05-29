@@ -311,6 +311,9 @@ img {
   SECTIONS / SERVICES /FAQS /RESOURCES
 ========================================================= */
 .caixa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: var(--section-spacing) 0;
 }
 
@@ -339,6 +342,27 @@ img {
 #recursos p {
   color: var(--color-white);
   font-weight: 700;
+}
+
+.conteudo-interno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 30px;
+  background: rgba(var(--color-black-rgb), .55);
+  border-radius: 10px;
+}
+
+.conteudo-interno h1 {
+  margin-bottom: 20px;
+  color: var(--color-white);
+  font-weight: 600;
+  text-align: center;
+}
+
+.conteudo-interno ul li {
+  margin-left: 30px;
 }
 
 .link-interno {
