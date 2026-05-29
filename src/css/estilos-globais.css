@@ -237,6 +237,7 @@ img {
   padding: 14px 32px;
   border-radius: var(--radius-pill);
   font-weight: 700;
+  margin: 15px;
   transition: transform var(--transition-normal),background var(--transition-normal),color var(--transition-normal),box-shadow var(--transition-normal);
 }
 
