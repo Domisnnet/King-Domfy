@@ -145,7 +145,6 @@ img {
 ========================================================= */
 .navbar {
   background: rgba(var(--rgb-black), .88);
-  padding: 15px 0;
   border-bottom: 1px solid var(--color-border);
   z-index: 9999;
 }
@@ -153,10 +152,28 @@ img {
 .navbar .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-brand {
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.navbar-brand img {
+  width: 100%;
+  max-width: 110px;
+  height: auto;
+}
+
+.navbar-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .navbar-brand img {
@@ -167,7 +184,6 @@ img {
 
 .navbar-nav {
   align-items: center;
-  gap: 10px;
 }
 
 .navbar-nav .nav-link {
@@ -189,7 +205,7 @@ img {
 }
 
 .navbar-nav .btn-custom {
-  padding: 10px;
+  padding: 10px 20px;
   font-weight: 500;
   border-radius: var(--radius-md);
   background: var(--color-primary);
@@ -231,12 +247,38 @@ img {
 }
 
 /* =========================================================
+  CAROUSEL CONTROLS
+========================================================= */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  bottom: auto;
+  width: 70px;
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev { left: 0; justify-content: flex-start; }
+.carousel-control-next { right: 0; justify-content: flex-end; }
+.carousel-control-prev i,
+.carousel-control-next i {
+  font-size: 4rem;
+  color: var(--color-white);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.carousel-control-prev:hover i,
+.carousel-control-next:hover i { color: var(--color-primary); transform: scale(1.08); }
+.carousel-item { padding: 1rem 5rem; }
+
+/* =========================================================
   BUTTONS
 ========================================================= */
 .btn-custom {
   padding: 14px 32px;
   border-radius: var(--radius-pill);
   font-weight: 700;
+  margin: 15px;
   transition: transform var(--transition-normal),background var(--transition-normal),color var(--transition-normal),box-shadow var(--transition-normal);
 }
 
@@ -722,17 +764,14 @@ footer ul:has(.social-icons) {
 }
 
 /* =========================================================
-  FOOTER RESPONSIVE
+  RESPONSIVE
 ========================================================= */
 @media (max-width: 991.98px) {
-  .navbar-collapse { margin-top: 20px; }
+  .navbar .container { flex-wrap: wrap; }
+  .navbar-brand img { min-width: 110px; }
+  .navbar-toggler { padding: .4rem .65rem; }
   .navbar-nav { text-align: center; }
-  .navbar-nav .btn-custom {
-    width: fit-content;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  .navbar-nav .btn-custom { width: fit-content; margin-top: 10px; margin-left: auto; margin-right: auto; }
   .divisor { display: none; }
   .capa h1 { font-size: 3rem; }
   footer { text-align: center; }
@@ -753,8 +792,12 @@ footer ul:has(.social-icons) {
 }
 
 @media (max-width: 768px) {
+  .navbar { padding: 12px 0; }
+  .navbar-brand img { padding: 10px; margin-left: 20px; }
+  .navbar-toggler { padding: 15px; }
   .capa h1 { font-size: 2.5rem; }
   .btn-custom { width: 100%; margin-bottom: 15px; }
+  .btn-roxo { display: none; }
   .rotacionar { transform: none; padding-left: 0; }
   .player-container { padding: 24px; }
   .album-art { max-width: 260px; }
