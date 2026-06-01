@@ -1285,7 +1285,7 @@ footer .row {
   main.caixa .lead { font-size: var(--size-text-lead); }
   .premium-wrapper { padding: var(--space-6); border-radius: var(--radius-md); }
   .premium-hero h1 { font-size: var(--size-premium-hero-title); }
-  .comparison-table { min-width: var(--space-table-min-mobile); }
+  .comparison-table { min-width: var(--premium-table-mobile-width); }
   .comparison-table th, .comparison-table td { padding: 0.85rem 0.75rem; font-size: 0.9rem; }
   .premium-card { margin-bottom: var(--space-6); }
   .privacy-container .btn-custom { width: 100%; min-width: 100%; }
