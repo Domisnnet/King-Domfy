@@ -226,11 +226,34 @@
   --section-spacing: var(--space-15);
   --card-padding: var(--space-8);
   --conteudo-interno-width: 700px;
+  --comparison-table-width: 460px;
   --panel-padding: var(--space-10);
   --navbar-logo-width: 110px;
   --accordion-button-padding-y: var(--space-4);
   --accordion-button-padding-x: var(--space-6);
   --accordion-body-padding: var(--space-6);
+
+  /* PREMIUM TOKENS */
+  --premium-wrapper-max-width: 1100px;
+  --premium-table-first-column: 48%;
+  --premium-table-plan-column: 26%;
+  --premium-table-padding-y: var(--space-4);
+  --premium-table-padding-x: var(--space-5);
+  --premium-table-header-bg:
+  linear-gradient( 135deg, var(--overlay-white-06), var(--overlay-primary-08));
+  --premium-table-row-hover: var(--overlay-white-03);
+  --premium-table-surface: rgba(var(--rgb-black), var(--op-default));
+  --premium-table-border: rgba(var(--rgb-white), var(--op-minimal));
+  --premium-table-header-border: rgba(var(--rgb-primary), var(--op-standard));
+  --premium-table-check-color: var(--color-primary);
+  --premium-table-close-color: var(--color-pink);
+  --premium-table-header-font-size: var(--fs-sm);
+  --premium-table-cell-font-size: var(--fs-sm);
+  --premium-table-feature-font-weight: var(--font-semibold);
+  --premium-table-icon-size: var(--fs-md);
+  --premium-table-radius: var(--radius-md);
+  --premium-table-shadow: var(--shadow-md);
+  --premium-table-mobile-width: 620px;
 }
 
 /* =========================================================
@@ -776,7 +799,7 @@ main.caixa .lead {
 }
 
 .premium-table-wrapper {
-  margin-top: var(--space-3);
+  margin-top: var(--space-10);
 }
 
 .premium-table-wrapper h2 {
@@ -785,38 +808,71 @@ main.caixa .lead {
 }
 
 .table-responsive {
-  border-radius: var(--radius-md);
   overflow-x: auto;
   overflow-y: hidden;
+  border-radius: var(--premium-table-radius);
+  border: var(--border-width-sm) var(--border-style-solid) var(--premium-table-border);
+  box-shadow: var(--premium-table-shadow);
   -webkit-overflow-scrolling: touch;
 }
 
 .comparison-table {
-  margin-bottom: 0;
-  background: var(--surface-glass);
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: var(--premium-table-surface);
+}
+
+.comparison-table thead th {
+  background: var(--premium-table-header-bg);
+  color: var(--color-text);
+  font-size: var(--premium-table-header-font-size);
+  font-weight: var(--font-bold);
+  text-align: center;
+  border-bottom: var(--border-width-md) var(--border-style-solid) var(--premium-table-header-border);
 }
 
 .comparison-table th,
 .comparison-table td {
-  padding: var(--space-4);
+  padding: var(--premium-table-padding-y) var(--premium-table-padding-x);
+  border: var(--border-width-sm) var(--border-style-solid) var(--premium-table-border);
   vertical-align: middle;
-  white-space: nowrap;
+  font-size: var(--premium-table-cell-font-size);
 }
 
-.comparison-table thead th {
-  font-size: var(--fs-sm);
-  font-weight: var(--font-bold);
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+  width: var(--premium-table-first-column);
+  text-align: left;
+  font-weight: var(--premium-table-feature-font-weight);
+}
+
+.comparison-table th:nth-child(2),
+.comparison-table td:nth-child(2),
+.comparison-table th:nth-child(3),
+.comparison-table td:nth-child(3) {
+  width: var(--premium-table-plan-column);
   text-align: center;
 }
 
-.comparison-table td:first-child {
-  font-weight: var(--font-semibold);
-  text-align: left;
-  white-space: normal;
+.comparison-table tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.comparison-table tbody tr:hover {
+  background: var(--premium-table-row-hover);
 }
 
 .comparison-table i {
-  font-size: var(--fs-sm);
+  font-size: var(--premium-table-icon-size);
+}
+
+.comparison-table .fa-check {
+  color: var(--premium-table-check-color);
+}
+
+.comparison-table .fa-times {
+  color: var(--premium-table-close-color);
 }
 
 .premium-benefits {
@@ -1236,6 +1292,13 @@ footer .row {
   #faqAccordion .accordion-button, #faqAccordion .accordion-body, .privacy-container .accordion-button, .privacy-container .accordion-body { padding: var(--space-4) var(--space-5); font-size: var(--fs-sm); }
   .espaco { flex-direction: row; }
   .footer-bottom { text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .comparison-table { min-width: var(--comparison-table-width); }
+  .comparison-table th,
+  .comparison-table td { padding: var(--space-2); font-size: var(--fs-xs); }
+  .comparison-table i { font-size: var(--fs-sm); }
 }
 
 @media (prefers-reduced-motion: reduce) {
