@@ -74,6 +74,7 @@
   --fs-xl: 2rem;
   --fs-xxl: 3rem;
   --fs-2xl: 4rem;
+  --fs-3xl: 5rem;
   --fs-title: clamp(2.5rem, 7vw, 5rem);
   --fs-lead: 1.05rem;
   --fs-premium-hero: 2.2rem;
@@ -103,7 +104,6 @@
   --hero-title-max-width: 12ch;
 
   --content-radius: 16px;
-  --space-brand: 110px;
   --space-divisor-height: 15px;
   --space-carousel-control-width: 70px;
   --space-player-icon: 80px;
@@ -225,7 +225,9 @@
 
   --section-spacing: var(--space-15);
   --card-padding: var(--space-8);
+  --conteudo-interno-width: 700px;
   --panel-padding: var(--space-10);
+  --navbar-logo-width: 110px;
   --accordion-button-padding-y: var(--space-4);
   --accordion-button-padding-x: var(--space-6);
   --accordion-body-padding: var(--space-6);
@@ -345,7 +347,12 @@ ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
   gap: var(--space-4);
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
 }
 
 .navbar-brand {
@@ -356,9 +363,9 @@ ol {
 }
 
 .navbar-brand img {
-  width: 100%;
-  max-width: var(--space-brand);
+  width: var(--navbar-logo-width);
   height: auto;
+  display: block;
 }
 
 .navbar-toggler {
@@ -377,6 +384,7 @@ ol {
 }
 
 .navbar-nav {
+  display: flex;
   align-items: center;
   gap: var(--space-2);
 }
@@ -407,7 +415,8 @@ ol {
 }
 
 .navbar-nav .btn-custom {
-  padding: var(--space-2) var(--space-5);
+  padding: 10px 24px;
+  margin: 0;
   font-weight: var(--font-medium);
   border-radius: var(--radius-md);
   background: var(--color-primary);
@@ -493,10 +502,13 @@ ol {
 ========================================================= */
 .btn-custom {
   padding: var(--space-3) var(--space-8);
-  margin: var(--space-4);
   border-radius: var(--radius-pill);
   font-weight: var(--font-bold);
-  transition: transform var(--transition-normal), background var(--transition-normal), color var(--transition-normal), box-shadow var(--transition-normal);
+  transition:
+    transform var(--transition-normal),
+    background var(--transition-normal),
+    color var(--transition-normal),
+    box-shadow var(--transition-normal);
 }
 
 .btn-custom:hover {
@@ -567,7 +579,7 @@ ol {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: var(--container-xl);
+  max-width: var(--conteudo-interno-width);
   margin: 0 auto;
   padding: var(--card-padding);
   background: rgba(var(--rgb-black), 0.55);
@@ -764,7 +776,7 @@ main.caixa .lead {
 }
 
 .premium-table-wrapper {
-  margin-top: var(--space-16);
+  margin-top: var(--space-3);
 }
 
 .premium-table-wrapper h2 {
@@ -1066,12 +1078,15 @@ footer .row {
   transform: translateY(-2px);
 }
 
-footer ul:has(.espaco),
-footer ul:has(.social-icons) {
+.footer-tech-list,
+.footer-social-list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-3);
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
 
 .espaco,
@@ -1191,7 +1206,8 @@ footer ul:has(.social-icons) {
   footer .footer-link { text-align: center; }
   footer h4 { margin-bottom: var(--space-4); }
   footer .espaco, footer .social-icons { margin: 0; }
-  footer ul:has(.espaco), footer ul:has(.social-icons) { justify-content: center; }
+  .footer-tech-list,
+  .footer-social-list { justify-content: center; }
   #dev { justify-content: center; }
   .footer-bottom { text-align: center; gap: var(--space-4); }
 }
