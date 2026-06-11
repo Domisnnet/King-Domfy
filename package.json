@@ -1,0 +1,41 @@
+{
+  "name": "king-domfy-web-essentials",
+  "version": "2.1.0",
+  "description": "Projeto conceitual de streaming musical inspirado no Spotify.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server --port=5500 --open=index.html",
+    "clean": "rimraf dist",
+    "create-dirs": "mkdir -p dist/src/css && mkdir -p dist/src/js && mkdir -p dist/src/assets/imagens && mkdir -p dist/src/assets/media && mkdir -p dist/src/templates && mkdir -p dist/pages",
+    "copy:html": "cpx \"index.html\" dist && cpx \"pages/**/*.html\" dist/pages",
+    "copy:css": "cpx \"src/css/**/*.css\" dist/src/css",
+    "copy:js": "cpx \"src/js/**/*.js\" dist/src/js",
+    "copy:templates": "cpx \"src/templates/**/*\" dist/src/templates",
+    "copy:assets": "cpx \"src/assets/**/*\" dist/src/assets",
+    "clean:maps": "rimraf dist/**/*.map",
+    "build": "npm-run-all clean create-dirs copy:html copy:css copy:js copy:assets copy:templates clean:maps",
+    "preview": "live-server dist --port=8080",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [
+    "spotify-clone",
+    "music-player",
+    "kingdomfy",
+    "html",
+    "css",
+    "javascript",
+    "bootstrap"
+  ],
+  "author": "DomisDev",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "cpx": "^1.5.0",
+    "gh-pages": "^6.1.1",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.5",
+    "uglify-js": "^3.17.4"
+  }
+}

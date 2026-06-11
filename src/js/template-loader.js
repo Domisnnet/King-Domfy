@@ -1,21 +1,31 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const base = document.body.dataset.base || "./";
-  function loadTemplate(targetId, templatePath) {
-    fetch(base + templatePath)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Erro ao carregar ${templatePath}`);
-        }
-        return response.text();
-      })
-      .then(html => {
-        html = html.replace(/{{BASE}}/g, base);
-        document.getElementById(targetId).innerHTML = html;
-      })
-      .catch(error => {
-        console.error(error);
-      });
+const getBasePath = () => {
+  const path = window.location.pathname;
+  const isInternalPage = path.includes('/pages/');
+  return isInternalPage ? '../' : './';
+};
+
+const loadTemplate = async ( templateName, targetId ) => {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+  const base = getBasePath();
+  const templatePath = `${base}src/templates/${templateName}`;
+  try {
+    const response = await fetch(templatePath);
+    if (!response.ok) {
+      throw new Error( `Erro ao carregar ${templateName}` );
+    }
+    let html = await response.text();
+    html = html.replace( /\{\{BASE\}\}/g, base );
+    target.innerHTML = html;
+  } catch (error) {
+    console.error( `Erro ao carregar template: ${templateName}`, error );
   }
-  loadTemplate("header-placeholder", "src/templates/header.html");
-  loadTemplate("footer-placeholder", "src/templates/footer.html");
-});
+};
+
+document.addEventListener(
+  'DOMContentLoaded',
+  async () => {
+    await loadTemplate( 'header.html', 'header-placeholder' );
+    await loadTemplate( 'footer.html', 'footer-placeholder' );
+  }
+);

@@ -8,7 +8,7 @@
 ![Tecnologias](https://img.shields.io/badge/Tecnologias-HTML%20%7C%20CSS%20%7C%20JS%20%7C%20Bootstrap-blueviolet)
 [![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/King-Domfy/blob/main/LICENSE)
 
-![King-Domfy](src/imagens/King-Domfy.png)
+![King-Domfy](src/assets/imagens/King-Domfy.png)
 
 Bem-vindo ao **King-Domfy**! Uma recriação de interface inspirada no Spotify, focada em entregar uma experiência de usuário fluida, com design responsivo e componentes modernos. Explore playlists, álbuns e uma interface pensada para todos os dispositivos.
 
@@ -42,7 +42,7 @@ Clique no botão abaixo para iniciar a experiência King-Domfy diretamente no se
 
 <div align="left">
   <a href="https://domisnnet.github.io/King-Domfy-Web-Essentials/" target="_blank">
-    <img alt="Botão Acessar" src="src/imagens/botão.webp" height="70" width="70" />
+    <img alt="Botão Acessar" src="src/assets/imagens/botão.webp" height="70" width="70" />
   </a>
 </div>
 
@@ -178,5 +178,5 @@ Este projeto está licenciado sob a [![Licença MIT](https://img.shields.io/badg
 <h2 id="perfil-do-github">12. 👨‍💻 Perfil do GitHub</h2>
 
 <a href="https://github.com/Domisnnet"> 
-  <img src="src/imagens/DomisDev.png" width="90" alt="Acessar perfil GitHub"> 
+  <img src="src/assets/imagens/DomisDev.png" width="90" alt="Acessar perfil GitHub"> 
 </a>
